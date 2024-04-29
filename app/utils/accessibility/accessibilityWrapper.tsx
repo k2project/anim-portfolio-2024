@@ -8,9 +8,6 @@ export default function AccessibilityWrapper({
 }: {
     children: React.ReactNode;
 }) {
-    React.useEffect(() => {
-        reportAccessibility(React);
-    }, []);
-
+    reportAccessibility(React);
     return <>{children}</>;
 }
