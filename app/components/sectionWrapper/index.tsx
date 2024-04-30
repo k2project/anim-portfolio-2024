@@ -17,6 +17,7 @@ export default function SectionWrapper({
     children,
     initialY,
     y,
+    withMaxDesktopContainer = true,
 }: ISectionWrapperProps) {
     return (
         <section className='relative' style={{ minHeight: height }}>
@@ -25,7 +26,13 @@ export default function SectionWrapper({
                 style={{ y }}
                 initial={{ y: initialY }}
             >
-                <div className='max-w-desktop flex-1 relative'>{children}</div>
+                {withMaxDesktopContainer ? (
+                    <div className='max-w-desktop flex-1 relative'>
+                        {children}
+                    </div>
+                ) : (
+                    children
+                )}
             </m.div>
         </section>
     );

@@ -14,16 +14,15 @@ export default function useIntroSection() {
         ],
         // animates the themed page up
         [
-            'div#bg-themed',
-            { width: '100vw' },
+            'div#bg-dark',
+            { height: '100vh' },
             {
-                duration: 0.75,
-                // ease: [0.48, 0.49, 1, 0.44],
+                duration: 1.5,
                 delay: 2.5,
             },
         ],
         [
-            'div#logo-container',
+            'div#logo-dark-container',
             {
                 transform: `rotate(-450deg)`,
                 top: '-30px',
@@ -31,16 +30,6 @@ export default function useIntroSection() {
             },
             {
                 duration: 0.5,
-                // delay: 0.25,
-            },
-        ],
-        // hides the fixed intro
-        [
-            'section#intro',
-            { width: 0 },
-            {
-                duration: 1,
-                delay: 1.5,
             },
         ],
     ];

@@ -6,6 +6,7 @@ export interface ILogoProps {
     stopColorPrimary?: string;
     stopColorSecondary?: string;
     id?: string;
+    style?: string;
 }
 
 export interface IAnimatedLogoProps extends ILogoProps {

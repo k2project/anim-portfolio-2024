@@ -6,7 +6,7 @@ import { STOP_COLOR_PRIMARY, STOP_COLOR_SECONDARY } from '@configs';
 
 export default function AnimatedLogo({
     color = 'black',
-    size = 130,
+    style = 'w-40 h-40',
     strokeWidth = 3,
     animated = true,
     id,
@@ -17,13 +17,11 @@ export default function AnimatedLogo({
     return (
         <>
             <m.svg
-                width={size}
-                height={size}
                 viewBox='0 0 39.378132 41.818489'
                 version='1.1'
                 id='svg5'
                 xmlns='http://www.w3.org/2000/svg'
-                style={{ width: size, height: size }}
+                className={style}
             >
                 <defs>
                     <linearGradient

@@ -17,7 +17,6 @@ export default function Logo({
             version='1.1'
             id='svg5'
             xmlns='http://www.w3.org/2000/svg'
-            style={{ width: size, height: size }}
         >
             <defs>
                 <linearGradient id='grad1' x1='0%' y1='100%' x2='100%' y2='0%'>
