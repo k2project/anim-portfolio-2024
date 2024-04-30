@@ -1,20 +1,14 @@
-import React from 'react';
+import { ILogoProps } from './types';
+import { STOP_COLOR_PRIMARY, STOP_COLOR_SECONDARY } from '@configs';
 
 export default function Logo({
     color = 'black',
     size = 100,
     strokeWidth = 4,
     gradient = false,
-    stopColorPrimary = 'red',
-    stopColorSecondary = 'orange',
-}: {
-    color?: string;
-    size?: number;
-    strokeWidth?: number;
-    gradient?: boolean;
-    stopColorPrimary?: string;
-    stopColorSecondary?: string;
-}) {
+    stopColorPrimary = STOP_COLOR_PRIMARY,
+    stopColorSecondary = STOP_COLOR_SECONDARY,
+}: ILogoProps) {
     return (
         <svg
             width={size}
@@ -36,7 +30,7 @@ export default function Logo({
             </defs>
             <g id='layer1' transform='translate(-115.68317,-14.453706)'>
                 <path
-                    d='M 140.85134,37.803132 153.47896,54.689696 128.82419,54.5231 117.26565,34.995009 129.09146,16.036206 h 24.05431 L 128.82419,54.5231 v 0'
+                    d='M 140.85134,37.803132 153.47896,54.689696 128.82419,54.5231 117.26565,34.995009 129.09146,16.036206 h 24.05431 L 128.82419,54 v 0'
                     id='path871'
                     strokeLinecap='round'
                     fill='none'

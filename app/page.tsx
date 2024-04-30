@@ -1,3 +1,9 @@
+import IntroSection from '@components/sections/intro';
+
 export default function Page() {
-    return <main></main>;
+    return (
+        <main>
+            <IntroSection />
+        </main>
+    );
 }

@@ -19,10 +19,18 @@
         ],
         "baseUrl": ".",
         "paths": {
-            "@/components/*": ["app/components/*"],
-            "@/utils/*": ["app/utils/*"]
+            "@components/*": ["app/components/*"],
+            "@utils/*": ["app/utils/*"],
+            "@configs": ["app/configs"],
+            "@types": ["app/types"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        ".next/types/**/*.ts",
+        "app/components/bottomFixedContainer"
+    ],
     "exclude": ["node_modules"]
 }

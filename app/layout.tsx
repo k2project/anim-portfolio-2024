@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import AccessibilityWrapper from './utils/accessibility/accessibilityWrapper';
+import AccessibilityWrapper from '@utils/accessibility/accessibilityWrapper';
+import AnimationWrapper from '@utils/animation/animationWrapper';
 
 export const metadata: Metadata = {
     title: 'Kris Kopczynski - Software Developer',
@@ -34,7 +35,9 @@ export default function RootLayout({
                 />
             </head>
             <body>
-                <AccessibilityWrapper>{children}</AccessibilityWrapper>
+                <AccessibilityWrapper>
+                    <AnimationWrapper>{children}</AnimationWrapper>
+                </AccessibilityWrapper>
             </body>
         </html>
     );
