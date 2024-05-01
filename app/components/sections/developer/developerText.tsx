@@ -1,4 +1,8 @@
-import { COLOR_TERTIARY } from '@configs';
+import {
+    COLOR_TERTIARY,
+    STOP_COLOR_PRIMARY,
+    STOP_COLOR_SECONDARY,
+} from '@configs';
 
 export const DEVELOPER_RATIO = 244.32394 / 51.987198;
 
@@ -28,8 +32,14 @@ export default function Developer({
         >
             <defs>
                 <linearGradient id='grad1' x1='0%' y1='100%' x2='100%' y2='0%'>
-                    <stop offset='0%' style={{ stopColor: 'red' }} />
-                    <stop offset='100%' style={{ stopColor: 'orange' }} />
+                    <stop
+                        offset='0%'
+                        style={{ stopColor: STOP_COLOR_PRIMARY }}
+                    />
+                    <stop
+                        offset='100%'
+                        style={{ stopColor: STOP_COLOR_SECONDARY }}
+                    />
                 </linearGradient>
             </defs>
             <g id='layer1' transform='translate(-216.86463,9.3964513)'>
