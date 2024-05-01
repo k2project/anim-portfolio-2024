@@ -12,13 +12,25 @@ const IntroSection: ISection = {
     scrollFromTop: 0,
     zIndex: 'z-[0]', //sections indices are custom classes from 0 to sections.length -1
 };
-export const DeveloperSection_H = 5000;
+
+export const DEVELOPER_SECTION_H = 5000;
 const DeveloperSection: ISection = {
-    height: DeveloperSection_H, //the intro's animation is automated and doesn't depend on scrolling
+    height: DEVELOPER_SECTION_H, //the intro's animation is automated and doesn't depend on scrolling
     scrollFromTop: 0,
     zIndex: 'z-[1]', //sections indices are custom classes from 0 to sections.length -1
 };
+
+export const ABOUT_SECTION_H = 10000;
+export const ABOUT_SECTION_FROM_TOP = DEVELOPER_SECTION_H;
+const AboutSection: ISection = {
+    height: ABOUT_SECTION_H, //the intro's animation is automated and doesn't depend on scrolling
+    scrollFromTop: ABOUT_SECTION_FROM_TOP,
+    zIndex: 'z-[2]', //sections indices are custom classes from 0 to sections.length -1
+    bg: 'bg-tertiary',
+};
+
 export const SectionsData: { [key: string]: ISection } = {
     [Sections.Intro]: IntroSection,
     [Sections.Developer]: DeveloperSection,
+    [Sections.About]: AboutSection,
 };
