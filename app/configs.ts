@@ -20,7 +20,7 @@ const DeveloperSection: ISection = {
     zIndex: 'z-[1]', //sections indices are custom classes from 0 to sections.length -1
 };
 
-export const ABOUT_SECTION_H = 10000;
+export const ABOUT_SECTION_H = 15000;
 export const ABOUT_SECTION_FROM_TOP = DEVELOPER_SECTION_H;
 const AboutSection: ISection = {
     height: ABOUT_SECTION_H, //the intro's animation is automated and doesn't depend on scrolling

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useState } from 'react';
 
 export default function SlideInOut({
@@ -39,7 +39,7 @@ export default function SlideInOut({
     return (
         <span>
             {text.split('').map((letter, index, string) => (
-                <motion.span
+                <m.span
                     key={letter + index}
                     className='inline-flex'
                     custom={{ index, delay }}
@@ -53,7 +53,7 @@ export default function SlideInOut({
                     }}
                 >
                     {letter.trim() ? letter : <>&nbsp;</>}
-                </motion.span>
+                </m.span>
             ))}
         </span>
     );
