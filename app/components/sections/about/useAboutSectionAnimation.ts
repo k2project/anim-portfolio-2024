@@ -5,7 +5,6 @@ import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
 
 interface IUseAboutSectionAnimation {
-    initialY: number;
     sectionY: MotionValue<number>;
 }
 export default function useAboutSectionAnimation(): IUseAboutSectionAnimation {
@@ -23,5 +22,5 @@ export default function useAboutSectionAnimation(): IUseAboutSectionAnimation {
         [0, -windowHeight]
     );
 
-    return { initialY: windowHeight, sectionY };
+    return { sectionY };
 }

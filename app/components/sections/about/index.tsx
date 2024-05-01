@@ -9,7 +9,7 @@ import Circles from './circles';
 import Summary from './summary';
 
 export default function AboutSection() {
-    const { initialY, sectionY } = useAboutSectionAnimation();
+    const { sectionY } = useAboutSectionAnimation();
 
     return (
         <SectionWrapper

@@ -11,10 +11,7 @@ export default function Circles() {
     const { circleSize, x, y } = useCirclesAnimation();
 
     return (
-        <m.div
-            className='relative inline-block bg-red-500 transform-gpu'
-            style={{ x, y }}
-        >
+        <m.div className='relative inline-block transform-gpu' style={{ x, y }}>
             <InnerCircle size={circleSize} />
             <MiddleBottomCircle size={circleSize} />
             <MiddleTopCircle size={circleSize} />
