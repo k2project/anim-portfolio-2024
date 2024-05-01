@@ -1,6 +1,6 @@
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
-import { DEVELOPER_SECTION_H } from '@configs';
+import { DEVELOPER_SECTION_H, MAX_DESKTOP } from '@configs';
 import { DEVELOPER_RATIO } from './developerText';
 
 interface IUseDeveloperTextAnimation {
@@ -15,7 +15,7 @@ export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation 
     const { windowWidth, windowHeight } = useWindowDimensions();
     const developerSectionH = DEVELOPER_SECTION_H * windowHeight;
 
-    const developerW = windowWidth * 0.45;
+    const developerW = Math.min(windowWidth, MAX_DESKTOP) * 0.5;
     const developerH = developerW * DEVELOPER_RATIO;
     const developerTop = useTransform(
         scrollY,
@@ -24,7 +24,7 @@ export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation 
     );
     const developerLightH = useTransform(
         scrollY,
-        [500, developerSectionH - windowHeight],
+        [windowHeight / 2, developerSectionH - windowHeight],
         [0, developerSectionH]
     );
 

@@ -3,7 +3,6 @@
 import DeveloperSection from '@components/sections/developer';
 import IntroSection from '@components/sections/intro';
 import useSections from './useSections';
-import ProgressBar from '@components/progressBar';
 import AboutSection from './about';
 
 export default function Sections() {
@@ -13,7 +12,6 @@ export default function Sections() {
             <IntroSection enableScrolling={enableScrolling} />
             {showScrollableSections && (
                 <>
-                    <ProgressBar />
                     <DeveloperSection />
                     <AboutSection />
                 </>

@@ -1,14 +1,16 @@
 'use client';
 
-import { m, useScroll } from 'framer-motion';
+import { m } from 'framer-motion';
+import useProgressBarAnimation from './useProgressBarAnimation';
 
 export default function ProgressBar() {
-    const { scrollYProgress } = useScroll();
+    const { scrollYProgress, opacity } = useProgressBarAnimation();
+
     return (
         <m.div
-            style={{ scaleX: scrollYProgress }}
-            initial={{ scaleX: 0 }}
-            className='h-3 bg-gradient-theme fixed z-10 top-0 left-0 w-full origin-left'
+            style={{ scaleX: scrollYProgress, opacity }}
+            initial={{ scaleX: 0, opacity: 0 }}
+            className='h-3 bg-gradient-theme fixed z-10 top-0 left-0 right-0 origin-left'
         />
     );
 }

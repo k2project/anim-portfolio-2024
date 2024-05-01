@@ -27,7 +27,7 @@ export default function SectionWrapper({
             style={{ minHeight: height * windowHeight }}
         >
             <m.div
-                className={`fixed w-screen h-screen top-0 left-0 overflow-hidden flex justify-center ${bg} ${zIndex}`}
+                className={`fixed w-screen h-screen top-0 left-0 overflow-hidden md:overflow-x-hidden flex justify-center ${bg} ${zIndex}`}
                 style={{ y }}
                 initial={{ y: initialY }}
             >

@@ -15,12 +15,10 @@ export default function useAboutSectionAnimation(): IUseAboutSectionAnimation {
     const sectionY = useTransform(
         scrollY,
         [
-            aboutSectionFromTop - windowHeight * 2,
-            aboutSectionFromTop,
-            aboutSectionFromTop + aboutSectionH,
+            aboutSectionFromTop + aboutSectionH - windowHeight * 2,
             aboutSectionFromTop + aboutSectionH - windowHeight,
         ],
-        [windowHeight, 0, 0, -windowHeight]
+        [0, -windowHeight]
     );
 
     return { initialY: windowHeight, sectionY };

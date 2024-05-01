@@ -33,8 +33,8 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
         : circleCenteredVertically; // on the larger screens centered vertically
 
     const inputRange = [
-        aboutSectionFromTop - windowHeight,
-        aboutSectionFromTop + windowHeight,
+        aboutSectionFromTop - windowHeight * 1.5,
+        aboutSectionFromTop,
         aboutSectionFromTop + windowHeight * 2,
         aboutSectionFromTop + aboutSectionH - windowHeight * 2,
     ];
@@ -47,7 +47,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     ]);
 
     const y = useTransform(scrollY, inputRange, [
-        isSmallerScreen ? -circleSize / 2 : circleSize / 2,
+        -circleSize / 2,
         yDefaultOutput,
         yDefaultOutput,
         circleCenteredVertically,

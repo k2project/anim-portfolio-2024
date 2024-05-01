@@ -13,7 +13,7 @@ export default function AboutSection() {
     return (
         <SectionWrapper
             {...SectionsData[Sections.About]}
-            initialY={initialY}
+            initialY={0}
             y={sectionY}
         >
             <Circles />

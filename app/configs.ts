@@ -26,7 +26,6 @@ const AboutSection: ISection = {
     height: ABOUT_SECTION_H, //the intro's animation is automated and doesn't depend on scrolling
     scrollFromTop: ABOUT_SECTION_FROM_TOP,
     zIndex: 'z-[2]', //sections indices are custom classes from 0 to sections.length -1
-    bg: 'bg-tertiary',
 };
 
 export const SectionsData: { [key: string]: ISection } = {

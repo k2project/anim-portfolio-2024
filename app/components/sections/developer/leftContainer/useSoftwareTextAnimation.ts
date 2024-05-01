@@ -1,7 +1,7 @@
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
 
-import { DEVELOPER_SECTION_H } from '@configs';
+import { DEVELOPER_SECTION_H, MAX_DESKTOP } from '@configs';
 import { SOFTWARE_RATIO } from './softwareText';
 
 interface IUseSoftwareTextAnimation {
@@ -14,7 +14,7 @@ export default function useSoftwareTextAnimation(): IUseSoftwareTextAnimation {
     const { windowWidth, windowHeight } = useWindowDimensions();
     const developerSectionH = DEVELOPER_SECTION_H * windowHeight;
 
-    const softwareW = windowWidth * 0.35;
+    const softwareW = Math.min(windowWidth, MAX_DESKTOP) * 0.4;
     const softwareH = softwareW * SOFTWARE_RATIO;
     const softwareTop = useTransform(
         scrollY,

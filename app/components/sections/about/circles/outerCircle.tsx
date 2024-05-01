@@ -5,7 +5,7 @@ import useCircleAnimation from './useCircleAnimation';
 
 export default function OuterCircle({
     size = 300,
-    style = 'fill-primary stroke-primary stroke-[.2px]',
+    style = 'fill-tertiary stroke-tertiary stroke-[.2px]',
 }: {
     size?: number;
     style?: string;
@@ -23,7 +23,7 @@ export default function OuterCircle({
             version='1.1'
             id='svg5'
             xmlns='http://www.w3.org/2000/svg'
-            className='absolute'
+            className='absolute overflow-visible'
         >
             <g
                 id='layer1'
