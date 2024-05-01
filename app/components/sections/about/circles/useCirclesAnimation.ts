@@ -23,6 +23,8 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const circleCenteredHorizontally = (containerWidth - circleSize) / 2;
     const circleCenteredVertically = (windowHeight - circleSize) / 2;
     const rightPadding = 40; // Ensures extra room for the right side content
+    const topOffset = windowHeight * 0.2;
+
     const xDefaultOutput = isSmallerScreen
         ? circleCenteredHorizontally // on small screens centered horizontally
         : circleCenteredHorizontally -
@@ -30,7 +32,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
           rightPadding; // on larger screens positioned on the left half of the screen/container
     const yDefaultOutput = isSmallerScreen
         ? circleCenteredVertically + windowHeight / 2 // on smaller screens positioned on the bottom half of the screen
-        : circleCenteredVertically; // on the larger screens centered vertically
+        : circleCenteredVertically + topOffset; // on the larger screens centered vertically with some offset on top
 
     const inputRange = [
         aboutSectionFromTop - windowHeight * 1.5,
