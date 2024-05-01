@@ -1,3 +1,5 @@
+'use client';
+
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
 
 interface IUseProgressBarAnimation {

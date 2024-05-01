@@ -37,7 +37,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const inputRange = [
         aboutSectionFromTop - windowHeight * 1.5,
         aboutSectionFromTop,
-        aboutSectionFromTop + windowHeight * 2,
+        aboutSectionFromTop + windowHeight * 7,
         aboutSectionFromTop + aboutSectionH - windowHeight * 2,
     ];
 

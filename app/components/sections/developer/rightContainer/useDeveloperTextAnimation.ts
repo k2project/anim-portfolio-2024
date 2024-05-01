@@ -1,3 +1,5 @@
+'use client';
+
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
 import { DEVELOPER_SECTION_H, MAX_DESKTOP } from '@configs';

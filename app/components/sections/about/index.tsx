@@ -6,6 +6,7 @@ import { Sections } from '@types';
 import React from 'react';
 import useAboutSectionAnimation from './useAboutSectionAnimation';
 import Circles from './circles';
+import Summary from './summary';
 
 export default function AboutSection() {
     const { initialY, sectionY } = useAboutSectionAnimation();
@@ -17,6 +18,7 @@ export default function AboutSection() {
             y={sectionY}
         >
             <Circles />
+            <Summary />
         </SectionWrapper>
     );
 }

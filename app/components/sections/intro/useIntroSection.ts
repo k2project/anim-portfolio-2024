@@ -1,3 +1,5 @@
+'use client';
+
 import { AnimationSequence, animate } from 'framer-motion';
 import { useEffect } from 'react';
 

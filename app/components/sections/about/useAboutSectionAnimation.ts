@@ -1,3 +1,5 @@
+'use client';
+
 import { ABOUT_SECTION_FROM_TOP, ABOUT_SECTION_H } from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';

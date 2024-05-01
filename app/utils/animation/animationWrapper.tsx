@@ -1,4 +1,5 @@
 'use client';
+
 import { LazyMotion, domAnimation } from 'framer-motion';
 
 /**
