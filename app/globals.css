@@ -23,4 +23,7 @@ body:-webkit-scrollbar {
     .text-balance {
         text-wrap: balance;
     }
+    .bg-gradient-theme {
+        @apply bg-gradient-to-r from-contrast to-orange-400;
+    }
 }

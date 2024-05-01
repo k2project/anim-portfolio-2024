@@ -8,7 +8,7 @@ export default function ProgressBar() {
         <m.div
             style={{ scaleX: scrollYProgress }}
             initial={{ scaleX: 0 }}
-            className='h-3 bg-gradient-to-r from-contrast to-orange-400 fixed z-10 top-0 left-0 w-full origin-left'
+            className='h-3 bg-gradient-theme fixed z-10 top-0 left-0 w-full origin-left'
         />
     );
 }
