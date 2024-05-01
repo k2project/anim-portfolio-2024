@@ -12,6 +12,8 @@ interface IUseCirclesAnimation {
 export default function useCirclesAnimation(): IUseCirclesAnimation {
     const { scrollY } = useScroll();
     const { windowHeight, windowWidth } = useWindowDimensions();
+    const aboutSectionH = ABOUT_SECTION_H * windowHeight;
+    const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
     const TW_MD_BREAKING_POINT = 768;
     const isSmallerScreen = windowWidth < TW_MD_BREAKING_POINT;
 
@@ -31,10 +33,10 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
         : circleCenteredVertically; // on the larger screens centered vertically
 
     const inputRange = [
-        ABOUT_SECTION_FROM_TOP - windowHeight,
-        ABOUT_SECTION_FROM_TOP + 3000,
-        ABOUT_SECTION_FROM_TOP + 8000,
-        ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H - windowHeight - 2000,
+        aboutSectionFromTop - windowHeight,
+        aboutSectionFromTop + windowHeight,
+        aboutSectionFromTop + windowHeight * 2,
+        aboutSectionFromTop + aboutSectionH - windowHeight * 2,
     ];
 
     const x = useTransform(scrollY, inputRange, [

@@ -12,12 +12,13 @@ interface IUseSoftwareTextAnimation {
 export default function useSoftwareTextAnimation(): IUseSoftwareTextAnimation {
     const { scrollY } = useScroll();
     const { windowWidth, windowHeight } = useWindowDimensions();
+    const developerSectionH = DEVELOPER_SECTION_H * windowHeight;
 
     const softwareW = windowWidth * 0.35;
     const softwareH = softwareW * SOFTWARE_RATIO;
     const softwareTop = useTransform(
         scrollY,
-        [0, DEVELOPER_SECTION_H - windowHeight],
+        [0, developerSectionH - windowHeight],
         [windowHeight, -softwareH]
     );
 

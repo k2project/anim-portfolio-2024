@@ -13,18 +13,19 @@ interface IUseDeveloperTextAnimation {
 export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation {
     const { scrollY } = useScroll();
     const { windowWidth, windowHeight } = useWindowDimensions();
+    const developerSectionH = DEVELOPER_SECTION_H * windowHeight;
 
     const developerW = windowWidth * 0.45;
     const developerH = developerW * DEVELOPER_RATIO;
     const developerTop = useTransform(
         scrollY,
-        [0, DEVELOPER_SECTION_H - windowHeight],
+        [0, developerSectionH - windowHeight],
         [-developerH, windowHeight]
     );
     const developerLightH = useTransform(
         scrollY,
-        [500, DEVELOPER_SECTION_H - windowHeight],
-        [0, DEVELOPER_SECTION_H]
+        [500, developerSectionH - windowHeight],
+        [0, developerSectionH]
     );
 
     return {

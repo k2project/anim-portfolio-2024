@@ -1,5 +1,6 @@
 'use client';
 
+import useWindowDimensions from '@utils/useWindowDimensions';
 import { ISectionWrapperProps } from './types';
 import { m } from 'framer-motion';
 
@@ -19,8 +20,12 @@ export default function SectionWrapper({
     y,
     withMaxDesktopContainer = true,
 }: ISectionWrapperProps) {
+    const { windowHeight } = useWindowDimensions();
     return (
-        <section className='relative' style={{ minHeight: height }}>
+        <section
+            className='relative'
+            style={{ minHeight: height * windowHeight }}
+        >
             <m.div
                 className={`fixed w-screen h-screen top-0 left-0 overflow-hidden flex justify-center ${bg} ${zIndex}`}
                 style={{ y }}

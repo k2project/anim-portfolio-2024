@@ -9,14 +9,16 @@ interface IUseAboutSectionAnimation {
 export default function useAboutSectionAnimation(): IUseAboutSectionAnimation {
     const { scrollY } = useScroll();
     const { windowHeight } = useWindowDimensions();
+    const aboutSectionH = ABOUT_SECTION_H * windowHeight;
+    const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
 
     const sectionY = useTransform(
         scrollY,
         [
-            ABOUT_SECTION_FROM_TOP - windowHeight * 2,
-            ABOUT_SECTION_FROM_TOP,
-            ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H,
-            ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H - windowHeight,
+            aboutSectionFromTop - windowHeight * 2,
+            aboutSectionFromTop,
+            aboutSectionFromTop + aboutSectionH,
+            aboutSectionFromTop + aboutSectionH - windowHeight,
         ],
         [windowHeight, 0, 0, -windowHeight]
     );
