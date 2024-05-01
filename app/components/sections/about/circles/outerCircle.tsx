@@ -37,7 +37,7 @@ export default function OuterCircle({
                     }}
                 >
                     <g
-                        aria-label='+AVID LEARNER+CREATIVE PROBLEM SOLVER'
+                        // aria-label='+AVID LEARNER+CREATIVE PROBLEM SOLVER'
                         id='text47941'
                     >
                         <path

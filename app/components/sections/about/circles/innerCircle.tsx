@@ -32,7 +32,7 @@ export default function InnerCircle({
             >
                 <m.g id='g52431' style={{ rotate }}>
                     <g
-                        aria-label='SELF-TAUGHT+SKILLFUL+ '
+                        // aria-label='SELF-TAUGHT+SKILLFUL+ '
                         transform='matrix(0.69506281,0,0,0.69506281,42.199375,37.288151)'
                         id='text63242'
                     >

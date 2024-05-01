@@ -36,7 +36,7 @@ export default function MiddleBottomCircle({
                     }}
                 >
                     <g
-                        aria-label='EXPERIENCED+DILIGENT+  '
+                        // aria-label='EXPERIENCED+DILIGENT+  '
                         transform='translate(0.01125224,0.11177354)'
                         id='text3136'
                     >

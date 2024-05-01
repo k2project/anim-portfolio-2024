@@ -36,7 +36,7 @@ export default function MiddleTopCircle({
                     }}
                 >
                     <g
-                        aria-label='DEDICATED+AMBITIOUS+ADAPTABLE+'
+                        // aria-label='DEDICATED+AMBITIOUS+ADAPTABLE+'
                         transform='translate(0.03361254,-0.01554994)'
                         id='text26540'
                     >
