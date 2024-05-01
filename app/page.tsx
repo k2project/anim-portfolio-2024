@@ -1,9 +1,9 @@
-import IntroSection from '@components/sections/intro';
+import Sections from '@components/sections';
 
 export default function Page() {
     return (
         <main>
-            <IntroSection />
+            <Sections />
         </main>
     );
 }

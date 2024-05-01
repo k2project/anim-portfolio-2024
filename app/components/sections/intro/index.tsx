@@ -7,8 +7,12 @@ import LightThemeContainer from './containers/lightThemeContainer';
 import DarkThemeContainer from './containers/darkThemeContainer';
 import useIntroSection from './useIntroSection';
 
-export default function IntroSection() {
-    useIntroSection();
+export default function IntroSection({
+    enableScrolling,
+}: {
+    enableScrolling: () => void;
+}) {
+    useIntroSection(enableScrolling);
 
     return (
         <SectionWrapper

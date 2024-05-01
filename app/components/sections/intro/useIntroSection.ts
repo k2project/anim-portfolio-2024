@@ -1,7 +1,7 @@
 import { AnimationSequence, animate } from 'framer-motion';
 import { useEffect } from 'react';
 
-export default function useIntroSection() {
+export default function useIntroSection(animCallback: () => void) {
     const sequence: AnimationSequence = [
         // animates logo in
         [
@@ -35,6 +35,6 @@ export default function useIntroSection() {
     ];
 
     useEffect(() => {
-        animate(sequence).then(() => console.log('@@@@@ scroll down'));
+        animate(sequence).then(() => animCallback());
     }, []);
 }
