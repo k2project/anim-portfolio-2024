@@ -24,7 +24,6 @@ export default function SoftwareText({
         >
             <g id='layer1' transform='translate(-159.60134,-46.678292)'>
                 <g
-                    aria-label='software'
                     transform='matrix(0,-0.26458333,0.26458333,0,17.518405,343.30828)'
                     id='text1878'
                 >

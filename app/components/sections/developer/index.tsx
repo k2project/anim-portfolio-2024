@@ -9,8 +9,14 @@ import useDeveloperSection from './useDeveloperSection';
 import { m } from 'framer-motion';
 
 export default function DeveloperSection() {
-    const { developerTop, softwareTop, softwareW, developerW, developerH } =
-        useDeveloperSection();
+    const {
+        developerTop,
+        softwareTop,
+        softwareW,
+        developerW,
+        developerH,
+        developerLightH,
+    } = useDeveloperSection();
     return (
         <SectionWrapper {...SectionsData[Sections.Developer]} initialY={0}>
             <div className='fixed top-0 left-0 w-screen h-screen flex justify-center overflow-hidden top-screen'>
@@ -22,7 +28,14 @@ export default function DeveloperSection() {
                     style={{ top: developerTop }}
                     initial={{ top: -developerH }}
                 >
-                    <DeveloperText size={developerW} />
+                    <m.div
+                        className='absolute overflow-hidden rounded-b-full'
+                        style={{ height: developerLightH }}
+                    >
+                        <DeveloperText size={developerW} />
+                    </m.div>
+
+                    <DeveloperText size={developerW} gradient />
                 </m.div>
             </div>
         </SectionWrapper>

@@ -10,6 +10,7 @@ interface IUseDeveloperSection {
     softwareW: number;
     developerW: number;
     developerH: number;
+    developerLightH: MotionValue<number>;
 }
 
 export default function useDeveloperSection(): IUseDeveloperSection {
@@ -23,6 +24,11 @@ export default function useDeveloperSection(): IUseDeveloperSection {
         [0, DeveloperSection_H - windowHeight],
         [-developerH, windowHeight]
     );
+    const developerLightH = useTransform(
+        scrollY,
+        [500, DeveloperSection_H - windowHeight],
+        [0, DeveloperSection_H]
+    );
     const softwareW = windowWidth * 0.35;
     const softwareH = softwareW * SOFTWARE_RATIO;
     const softwareTop = useTransform(
@@ -31,5 +37,12 @@ export default function useDeveloperSection(): IUseDeveloperSection {
         [windowHeight, -softwareH]
     );
 
-    return { developerTop, softwareTop, softwareW, developerW, developerH };
+    return {
+        developerTop,
+        softwareTop,
+        softwareW,
+        developerW,
+        developerH,
+        developerLightH,
+    };
 }

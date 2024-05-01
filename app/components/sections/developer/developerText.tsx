@@ -34,7 +34,6 @@ export default function Developer({
             </defs>
             <g id='layer1' transform='translate(-216.86463,9.3964513)'>
                 <g
-                    aria-label='developer'
                     transform='matrix(0,-0.26458333,0.26458333,0,130.09271,355.62375)'
                     id='text1900'
                 >

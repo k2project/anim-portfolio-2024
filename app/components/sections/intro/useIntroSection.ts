@@ -25,8 +25,6 @@ export default function useIntroSection(animCallback: () => void) {
             'div#logo-dark-container',
             {
                 transform: `rotate(-450deg)`,
-                top: '-30px',
-                left: '60px',
             },
             {
                 duration: 0.5,

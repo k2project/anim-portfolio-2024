@@ -14,7 +14,7 @@ export default function DarkThemeContainer() {
         >
             <div className='absolute bottom-0 w-full h-screen flex justify-center items-center pb-28'>
                 <m.div style={{ opacity, scale }}>
-                    <m.div id='logo-dark-container'>
+                    <m.div id='logo-dark-container' className='relative'>
                         <SharedLogo gradient={false} />
                     </m.div>
                 </m.div>
@@ -22,13 +22,13 @@ export default function DarkThemeContainer() {
                     className='text-center absolute bottom-24 w-full opacity-100'
                     style={{ opacity }}
                 >
-                    <h3 className='whitespace-pre-line tracking-widest text-sm font-semibold text-tertiary'>
+                    <p className='whitespace-pre-line tracking-widest text-sm font-semibold text-tertiary'>
                         <SlideInOut
                             text='SCROLL DOWN'
                             delay={7}
                             showOnAnimEnd={true}
                         />
-                    </h3>
+                    </p>
                 </m.div>
             </div>
         </m.div>
