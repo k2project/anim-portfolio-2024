@@ -20,7 +20,7 @@ export default function DarkThemeContainer() {
                 </m.div>
                 <m.div
                     className='text-center absolute bottom-24 w-full opacity-100'
-                    style={{ opacity }}
+                    style={{ opacity, scale }}
                 >
                     <p className='whitespace-pre-line tracking-widest text-sm font-semibold text-tertiary'>
                         <SlideInOut
