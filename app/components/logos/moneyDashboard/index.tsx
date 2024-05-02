@@ -24,8 +24,8 @@ export default function MoneyDashboardLogo({
             </defs>
             <g
                 id='SVGRepo_tracerCarrier'
-                stroke-linecap='round'
-                stroke-linejoin='round'
+                strokeLinecap='round'
+                strokeLinejoin='round'
             ></g>
             <g id='SVGRepo_iconCarrier' className={style}>
                 <rect
@@ -36,7 +36,7 @@ export default function MoneyDashboardLogo({
                     rx='1'
                     stroke='none'
                     fill={gradient ? 'url(#grad1)' : ''}
-                    stroke-linejoin='round'
+                    strokeLinejoin='round'
                 />
                 <rect
                     x='6'
@@ -46,7 +46,7 @@ export default function MoneyDashboardLogo({
                     rx='1'
                     stroke='none'
                     fill={gradient ? 'url(#grad1)' : ''}
-                    stroke-linejoin='round'
+                    strokeLinejoin='round'
                 />
             </g>
         </svg>

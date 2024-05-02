@@ -18,7 +18,7 @@ export default function WorkHistoryItem({
     const { x, opacity, logoScale } = useWorkHistoryItemAnimation(index);
 
     return (
-        <m.div
+        <m.li
             className='flex items-end text-tertiary pb-5'
             style={{ x, opacity }}
             initial={{ opacity: 0 }}
@@ -39,6 +39,6 @@ export default function WorkHistoryItem({
                     {startDate} &bull; {duration}
                 </p>
             </div>
-        </m.div>
+        </m.li>
     );
 }
