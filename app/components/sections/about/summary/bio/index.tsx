@@ -4,7 +4,8 @@ import { m } from 'framer-motion';
 import useBioAnimation from './useBioAnimation';
 
 export default function Bio() {
-    const { headingScale, headingY, textY } = useBioAnimation();
+    const { headingScale, headingY, textY, windowHeight, textOpacity } =
+        useBioAnimation();
 
     return (
         <div className='md:w-10/12'>
@@ -17,7 +18,10 @@ export default function Bio() {
                     4+ years of experience
                 </m.h2>
             </m.div>
-            <m.div style={{ y: textY }} className='top-[100vh]'>
+            <m.div
+                style={{ y: textY, opacity: textOpacity }}
+                initial={{ y: windowHeight, opacity: 0 }}
+            >
                 <p className='font-medium uppercase text-xl'>
                     Working with startups and private clients to design and
                     build robust and scalable mobile and web applications that

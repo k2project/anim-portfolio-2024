@@ -8,6 +8,8 @@ interface IUseBioAnimation {
     headingScale: MotionValue<number>;
     headingY: MotionValue<number>;
     textY: MotionValue<number>;
+    textOpacity: MotionValue<number>;
+    windowHeight: number;
 }
 export default function useBioAnimation(): IUseBioAnimation {
     const { scrollY } = useScroll();
@@ -38,6 +40,14 @@ export default function useBioAnimation(): IUseBioAnimation {
         ],
         [windowHeight, 0, 0, -windowHeight]
     );
+    const textOpacity = useTransform(
+        scrollY,
+        [
+            aboutSectionFromTop + windowHeight * 1.25,
+            aboutSectionFromTop + windowHeight * 1.5,
+        ],
+        [0, 1]
+    );
 
-    return { headingScale, headingY, textY };
+    return { headingScale, headingY, textY, windowHeight, textOpacity };
 }
