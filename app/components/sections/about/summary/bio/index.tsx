@@ -4,20 +4,18 @@ import { m } from 'framer-motion';
 import useBioAnimation from './useBioAnimation';
 
 export default function Bio() {
-    const { headingScale, headingY, textY, windowHeight, textOpacity } =
+    const { headingScale, textY, windowHeight, textOpacity } =
         useBioAnimation();
 
     return (
         <div className='md:w-10/12'>
-            <m.div style={{ y: headingY }}>
-                <m.h2
-                    style={{ scale: headingScale }}
-                    initial={{ scale: 0 }}
-                    className='font-bold uppercase text-5xl lg:text-7xl pb-6 origin-left bg-gradient-theme inline-block text-transparent bg-clip-text'
-                >
-                    Experience & Skills
-                </m.h2>
-            </m.div>
+            <m.h2
+                style={{ scale: headingScale }}
+                initial={{ scale: 0 }}
+                className='font-bold uppercase text-5xl md:text-7xl pb-6 origin-left bg-gradient-theme inline-block text-transparent bg-clip-text'
+            >
+                Experience, Skills &amp; more...
+            </m.h2>
             <m.div
                 style={{ y: textY, opacity: textOpacity }}
                 initial={{ y: windowHeight, opacity: 0 }}

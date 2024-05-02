@@ -6,7 +6,6 @@ import { MotionValue, useScroll, useTransform } from 'framer-motion';
 
 interface IUseBioAnimation {
     headingScale: MotionValue<number>;
-    headingY: MotionValue<number>;
     textY: MotionValue<number>;
     textOpacity: MotionValue<number>;
     windowHeight: number;
@@ -22,32 +21,23 @@ export default function useBioAnimation(): IUseBioAnimation {
         [aboutSectionFromTop, aboutSectionFromTop + windowHeight],
         [0, 1]
     );
-    const headingY = useTransform(
-        scrollY,
-        [
-            aboutSectionFromTop + aboutSectionH - windowHeight * 3.5,
-            aboutSectionFromTop + aboutSectionH - windowHeight * 2.5,
-        ],
-        [0, -windowHeight]
-    );
+
     const textY = useTransform(
         scrollY,
         [
             aboutSectionFromTop + windowHeight * 0.75,
-            aboutSectionFromTop + windowHeight * 1.5,
-            aboutSectionFromTop + aboutSectionH - windowHeight * 3.5,
-            aboutSectionFromTop + aboutSectionH - windowHeight * 2.5,
+            aboutSectionFromTop + windowHeight * 2,
         ],
-        [windowHeight, 0, 0, -windowHeight]
+        [windowHeight, 0]
     );
     const textOpacity = useTransform(
         scrollY,
         [
-            aboutSectionFromTop + windowHeight * 1.25,
             aboutSectionFromTop + windowHeight * 1.5,
+            aboutSectionFromTop + windowHeight * 2,
         ],
         [0, 1]
     );
 
-    return { headingScale, headingY, textY, windowHeight, textOpacity };
+    return { headingScale, textY, windowHeight, textOpacity };
 }

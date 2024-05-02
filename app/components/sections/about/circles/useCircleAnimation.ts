@@ -11,6 +11,8 @@ export default function useCircleAnimation({
     outputRange: number[];
 }): IUseCircleAnimation {
     const { scrollY } = useScroll();
+
+    // Rotating anim on scrolling
     const rotate = useTransform(scrollY, inputRange, outputRange, {
         clamp: false,
     });

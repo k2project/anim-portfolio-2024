@@ -1,4 +1,4 @@
-export interface IHistoryItem {
+export interface IWorkHistoryItem {
     company: string;
     title: string;
     startDate: string;

@@ -14,17 +14,18 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const { windowHeight, windowWidth } = useWindowDimensions();
     const aboutSectionH = ABOUT_SECTION_H * windowHeight;
     const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
-    const TW_MD_BREAKING_POINT = 768;
-    const isSmallerScreen = windowWidth < TW_MD_BREAKING_POINT;
+    const SMALL_SCREEN_BREAKING_POINT = 1024; //TW lg:
+    const isSmallerScreen = windowWidth < SMALL_SCREEN_BREAKING_POINT;
 
     const circleSize = Math.min(windowWidth, windowHeight);
     // On larger screens the width is restricted to the MAX_DESKTOP
     const containerWidth = Math.min(windowWidth, MAX_DESKTOP);
     const circleCenteredHorizontally = (containerWidth - circleSize) / 2;
     const circleCenteredVertically = (windowHeight - circleSize) / 2;
-    const rightPadding = 80; // Ensures extra room for the right side content
+    const rightPadding = 80; // Ensures extra room for the right side content when the circles are placed on the left
     const topOffset = windowHeight * 0.2;
 
+    // Default: centered positioning
     const xDefaultOutput = isSmallerScreen
         ? circleCenteredHorizontally // on small screens centered horizontally
         : circleCenteredHorizontally -
@@ -41,6 +42,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
         aboutSectionFromTop + aboutSectionH - windowHeight * 2,
     ];
 
+    // Moves the circles about on the screen in x and y axis - animation
     const x = useTransform(scrollY, inputRange, [
         windowWidth,
         xDefaultOutput,
@@ -52,7 +54,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
         -circleSize / 2,
         yDefaultOutput,
         yDefaultOutput,
-        circleCenteredVertically,
+        circleCenteredVertically - 50, //Prevents cutting out the bottom of the circles containers when animating out to the top ( due to overflowing property of the parent container)
     ]);
 
     return { circleSize, x, y };

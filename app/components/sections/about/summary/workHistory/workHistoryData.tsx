@@ -1,28 +1,28 @@
 import EstendioLogo from '@components/logos/estendio';
-import { IHistoryItem } from './types';
+import { IWorkHistoryItem } from './types';
 import MoneyDashboardLogo from '@components/logos/moneyDashboard';
 import Logo from '@components/logos/app';
 
-export const workHistoryData: IHistoryItem[] = [
+export const workHistoryData: IWorkHistoryItem[] = [
     {
         company: 'Estendio',
         title: 'Software Developer / Senior Frontend Developer',
         startDate: '2021',
         duration: '3 years',
-        logo: <EstendioLogo />,
+        logo: <EstendioLogo gradient />,
     },
     {
         company: 'Money Dashboard',
         title: 'Junior Frontend Developer',
         startDate: '2020',
         duration: '8 months',
-        logo: <MoneyDashboardLogo />,
+        logo: <MoneyDashboardLogo gradient />,
     },
     {
         company: 'Freelancer',
         title: 'Web Developer',
         startDate: '2019',
         duration: '3 years',
-        logo: <Logo size={20} strokeWidth={5} gradient />,
+        logo: <Logo size={27} strokeWidth={5.8} gradient />,
     },
 ];

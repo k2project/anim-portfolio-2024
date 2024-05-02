@@ -13,6 +13,7 @@ export default function useAboutSectionAnimation(): IUseAboutSectionAnimation {
     const aboutSectionH = ABOUT_SECTION_H * windowHeight;
     const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
 
+    //Move the section up at the end of the scrollable container height
     const sectionY = useTransform(
         scrollY,
         [
