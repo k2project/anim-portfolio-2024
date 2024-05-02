@@ -6,7 +6,7 @@ export const workHistoryData: IHistoryItem[] = [
         title: 'Software Developer / Senior Frontend Developer',
         startDate: '2021',
         duration: '3 years',
-        imageUrl: '/assets/estendio-logo.png',
+        imageUrl: '/anim-portfolio-2024/assets/estendio-logo.png',
     },
     // { company: 'Estendio', title: '', duration: '', imageUrl: '' },
     // { company: 'Estendio', title: '', duration: '', imageUrl: '' },
