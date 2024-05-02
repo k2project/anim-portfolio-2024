@@ -5,6 +5,7 @@ export default function WorkHistoryItem({
     company,
     title,
     imageUrl,
+    startDate,
     duration,
 }: IHistoryItem) {
     return (
@@ -20,7 +21,9 @@ export default function WorkHistoryItem({
                 <h4 className='font-semibold'>{company}</h4>
                 <p className='text-xs capitalize'>{title}</p>
             </div>
-            <p className='flex-1 flex justify-end lowercase'>{duration}</p>
+            <p className='flex-1 flex justify-end lowercase'>
+                {startDate} &bull; {duration}
+            </p>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import WorkHistoryItem from './workHistoryItem';
 
 export default function WorkHistory() {
     return (
-        <div className='hidden md:block pt-20'>
+        <div className='hidden md:block pt-20 w-10/12'>
             <h3 className='sr-only' id='work-history'>
                 Work history
             </h3>
@@ -12,7 +12,6 @@ export default function WorkHistory() {
                     <WorkHistoryItem {...item} key={item.company} />
                 ))}
             </ul>
-            work list
         </div>
     );
 }
