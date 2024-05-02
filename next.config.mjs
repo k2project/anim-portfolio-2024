@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: process.env.BASE_PATH, //<=== path for static assets
-    assetPrefix: process.env.BASE_PATH, //<=== path for static assets
+    basePath: '/anim-portfolio-2024', //<=== path for static assets
+    assetPrefix: '/anim-portfolio-2024', //<=== path for static assets
     images: {
         domains: ['media.licdn.com'],
     },
