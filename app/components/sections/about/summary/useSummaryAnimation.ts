@@ -15,13 +15,14 @@ export default function useSummaryAnimation(): IUseSummaryAnimation {
     const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
 
     // Animates the section out of the screen in top direction
+
     const y = useTransform(
         scrollY,
         [
             aboutSectionFromTop + aboutSectionH - windowHeight * 3.5,
             aboutSectionFromTop + aboutSectionH - windowHeight * 2.5,
         ],
-        [0, -windowWidth]
+        [0, -windowWidth * 1.25]
     );
 
     return { y };

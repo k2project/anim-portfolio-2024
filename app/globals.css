@@ -26,4 +26,7 @@ body:-webkit-scrollbar {
     .bg-gradient-theme {
         @apply bg-gradient-to-r from-contrast via-orange-400 to-yellow-500;
     }
+    .text-gradient-theme {
+        @apply bg-gradient-to-r from-contrast via-orange-400 to-yellow-500 text-transparent bg-clip-text;
+    }
 }

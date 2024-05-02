@@ -1,6 +1,11 @@
 'use client';
 
-import { ABOUT_SECTION_FROM_TOP, ABOUT_SECTION_H, MAX_DESKTOP } from '@configs';
+import {
+    ABOUT_SECTION_FROM_TOP,
+    ABOUT_SECTION_H,
+    MAX_DESKTOP,
+    SMALL_SCREEN_BREAKING_POINT,
+} from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
 
@@ -14,7 +19,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const { windowHeight, windowWidth } = useWindowDimensions();
     const aboutSectionH = ABOUT_SECTION_H * windowHeight;
     const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
-    const SMALL_SCREEN_BREAKING_POINT = 1024; //TW lg:
+
     const isSmallerScreen = windowWidth < SMALL_SCREEN_BREAKING_POINT;
 
     const circleSize = Math.min(windowWidth, windowHeight);
@@ -39,7 +44,9 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
         aboutSectionFromTop - windowHeight * 1.5,
         aboutSectionFromTop,
         aboutSectionFromTop + windowHeight * 7,
-        aboutSectionFromTop + aboutSectionH - windowHeight * 2,
+        aboutSectionFromTop +
+            aboutSectionH -
+            windowHeight * (isSmallerScreen ? 1 : 2),
     ];
 
     // Moves the circles about on the screen in x and y axis - animation

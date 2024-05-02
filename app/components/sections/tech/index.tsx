@@ -7,7 +7,7 @@ import React from 'react';
 import useTechSectionAnimation from './useTechSectionAnimation';
 import MainTech from './mainTech';
 import SecondaryTech from './secondaryTech';
-import Buttons from './buttons';
+import Buttons from './links';
 
 export default function TechSection() {
     const { sectionY, initialY } = useTechSectionAnimation();
@@ -18,9 +18,13 @@ export default function TechSection() {
             initialY={initialY}
             y={sectionY}
         >
-            <MainTech />
-            <SecondaryTech />
-            <Buttons />
+            <div className='flex w-full h-full justify-center items-center'>
+                <div>
+                    <MainTech />
+                    <SecondaryTech />
+                    <Buttons />
+                </div>
+            </div>
         </SectionWrapper>
     );
 }

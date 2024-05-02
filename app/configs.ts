@@ -1,6 +1,7 @@
 import { ISection, Sections } from '@types';
 
 export const MAX_DESKTOP = 1920; //max size of the content wrapper on larger desktops
+export const SMALL_SCREEN_BREAKING_POINT = 1024; //TW lg:
 
 // Used for svg
 export const COLOR_PRIMARY = '#312f38';
