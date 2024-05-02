@@ -12,7 +12,7 @@ export default function Bio() {
             <m.h2
                 style={{ scale: headingScale }}
                 initial={{ scale: 0 }}
-                className='font-bold uppercase text-5xl md:text-7xl pb-6 origin-left text-gradient-theme'
+                className='font-bold uppercase text-5xl xl:text-7xl pb-6 origin-left text-gradient-theme'
             >
                 Experience, Skills &amp; more...
             </m.h2>
@@ -20,7 +20,7 @@ export default function Bio() {
                 style={{ y: textY, opacity: textOpacity }}
                 initial={{ y: windowHeight, opacity: 0 }}
             >
-                <p className='font-medium uppercase text-xl'>
+                <p className='font-medium uppercase text-lg lg:text-xl pb-0 sm:pb-20 lg:pb-0'>
                     Working with startups and private clients to design and
                     build robust and scalable mobile and web applications that
                     people love to use.

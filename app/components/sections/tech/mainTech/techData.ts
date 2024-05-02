@@ -31,4 +31,4 @@ export const TECH_ROW_SIZE = Math.max(techMainRow1.length, techMainRow2.length);
 export const listStyle =
     'grid-cols-3 md:grid-cols-4 gap-4 max-w-[calc(1920px*0.75)]';
 export const itemStyle =
-    'w-[calc(100vw*.65/3)] h-[calc(100vw*.65/3)] md:w-[calc(100vw*.6/4)] md:h-[calc(100vw*.6/4)] max-h-[calc(1920px*0.5/4)] max-w-[calc(1920px*0.5/4)]';
+    'w-[calc(100vw*.65/3)] h-[calc(100vw*.65/3)] md:w-[calc(100vw*.5/4)] md:h-[calc(100vw*.5/4)] lg:w-[calc(100vw*.6/4)] lg:h-[calc(100vw*.6/4)] max-h-[calc(1920px*0.5/4)] max-w-[calc(1920px*0.5/4)]';
