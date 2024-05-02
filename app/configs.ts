@@ -29,8 +29,18 @@ const AboutSection: ISection = {
     zIndex: 'z-[2]', //sections indices are custom classes from 0 to sections.length -1
 };
 
+export const TECH_SECTION_FROM_TOP = DEVELOPER_SECTION_H + ABOUT_SECTION_H;
+export const TECH_SECTION_H = 6;
+const TechSection: ISection = {
+    height: TECH_SECTION_H, //the intro's animation is automated and doesn't depend on scrolling
+    scrollFromTop: TECH_SECTION_FROM_TOP,
+    zIndex: 'z-[3]', //sections indices are custom classes from 0 to sections.length -1
+    bg: 'bg-tertiary',
+};
+
 export const SectionsData: { [key: string]: ISection } = {
     [Sections.Intro]: IntroSection,
     [Sections.Developer]: DeveloperSection,
     [Sections.About]: AboutSection,
+    [Sections.Tech]: TechSection,
 };

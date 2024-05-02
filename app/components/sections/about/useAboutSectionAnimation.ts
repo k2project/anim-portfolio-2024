@@ -18,7 +18,7 @@ export default function useAboutSectionAnimation(): IUseAboutSectionAnimation {
         scrollY,
         [
             aboutSectionFromTop + aboutSectionH - windowHeight * 2,
-            aboutSectionFromTop + aboutSectionH - windowHeight,
+            aboutSectionFromTop + aboutSectionH,
         ],
         [0, -windowHeight]
     );
