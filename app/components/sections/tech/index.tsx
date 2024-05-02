@@ -5,6 +5,9 @@ import { SectionsData } from '@configs';
 import { Sections } from '@types';
 import React from 'react';
 import useTechSectionAnimation from './useTechSectionAnimation';
+import MainTech from './mainTech';
+import SecondaryTech from './secondaryTech';
+import Buttons from './buttons';
 
 export default function TechSection() {
     const { sectionY, initialY } = useTechSectionAnimation();
@@ -15,7 +18,9 @@ export default function TechSection() {
             initialY={initialY}
             y={sectionY}
         >
-            tech
+            <MainTech />
+            <SecondaryTech />
+            <Buttons />
         </SectionWrapper>
     );
 }

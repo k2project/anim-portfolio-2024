@@ -13,7 +13,6 @@ export default function useTechSectionAnimation(): IUseTechSectionAnimation {
     const { windowHeight } = useWindowDimensions();
     const techSectionH = TECH_SECTION_H * windowHeight;
     const techSectionFromTop = TECH_SECTION_FROM_TOP * windowHeight;
-    console.log(TECH_SECTION_FROM_TOP);
 
     //Move the section up at the end of the scrollable container height
     const sectionY = useTransform(
