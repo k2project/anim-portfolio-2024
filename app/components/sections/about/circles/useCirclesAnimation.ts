@@ -22,7 +22,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const containerWidth = Math.min(windowWidth, MAX_DESKTOP);
     const circleCenteredHorizontally = (containerWidth - circleSize) / 2;
     const circleCenteredVertically = (windowHeight - circleSize) / 2;
-    const rightPadding = 40; // Ensures extra room for the right side content
+    const rightPadding = 80; // Ensures extra room for the right side content
     const topOffset = windowHeight * 0.2;
 
     const xDefaultOutput = isSmallerScreen

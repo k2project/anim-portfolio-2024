@@ -1,4 +1,4 @@
-import AnimatedLogo from '@components/logo/animatedLogo';
+import AnimatedLogo from '@components/logos/app/animatedLogo';
 import React from 'react';
 
 export default function SharedLogo({ gradient }: { gradient: boolean }) {

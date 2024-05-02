@@ -15,7 +15,7 @@ export default function Bio() {
                     initial={{ scale: 0 }}
                     className='font-bold uppercase text-5xl lg:text-7xl pb-6 origin-left bg-gradient-theme inline-block text-transparent bg-clip-text'
                 >
-                    4+ years of experience
+                    Experience & Skills
                 </m.h2>
             </m.div>
             <m.div

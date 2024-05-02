@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import Logo from '@components/logo';
+import Logo from '@components/logos/app';
 
 // Image metadata
 export const size = {

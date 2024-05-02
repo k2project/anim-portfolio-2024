@@ -3,5 +3,5 @@ export interface IHistoryItem {
     title: string;
     startDate: string;
     duration: string;
-    imageUrl: string;
+    logo: JSX.Element;
 }

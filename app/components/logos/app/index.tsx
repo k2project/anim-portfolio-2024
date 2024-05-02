@@ -1,8 +1,12 @@
 import { ILogoProps } from './types';
-import { STOP_COLOR_PRIMARY, STOP_COLOR_SECONDARY } from '@configs';
+import {
+    COLOR_PRIMARY,
+    STOP_COLOR_PRIMARY,
+    STOP_COLOR_SECONDARY,
+} from '@configs';
 
 export default function Logo({
-    color = 'black',
+    color = COLOR_PRIMARY,
     size = 100,
     strokeWidth = 4,
     gradient = false,

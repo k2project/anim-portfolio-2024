@@ -3,6 +3,7 @@ import { ISection, Sections } from '@types';
 export const MAX_DESKTOP = 1920; //max size of the content wrapper on larger desktops
 
 // Used for svg
+export const COLOR_PRIMARY = '#312f38';
 export const COLOR_TERTIARY = '#fdffff';
 export const STOP_COLOR_PRIMARY = '#e73c37';
 export const STOP_COLOR_SECONDARY = '#fbbf24';
