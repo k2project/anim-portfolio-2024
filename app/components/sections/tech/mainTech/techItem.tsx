@@ -8,31 +8,23 @@ import { itemStyle } from './techData';
 
 interface ITechItemProps extends ITechLogo {
     index: number;
-    reverseAnim?: boolean;
 }
 
-export default function TechItem({
-    src,
-    alt,
-    index,
-    reverseAnim = false,
-}: ITechItemProps) {
-    const {} = useTechItem();
+export default function TechItem({ src, alt, index }: ITechItemProps) {
+    const { x } = useTechItem(index);
 
     return (
         <m.li
             className={`relative bg-tertiary rounded-md inline-block border-none drop-shadow-lg border-primary ${itemStyle}`}
+            style={{ x }}
         >
             <Image
                 src={src}
                 alt={alt}
                 fill={true}
-                className='p-4 sm:p-6 xl:p-10 opacity-80'
+                className='p-4 sm:p-7 xl:p-9 opacity-80'
                 sizes='100vw, 50vw, 30vw'
             />
-            {/* <p className='w-full text-center text-xs absolute bottom-2'>
-                {alt}
-            </p> */}
         </m.li>
     );
 }

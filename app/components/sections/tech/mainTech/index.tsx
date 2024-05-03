@@ -1,9 +1,4 @@
-import {
-    listStyle,
-    techMainRow1,
-    techMainRow2,
-    techMainRow3,
-} from './techData';
+import { listStyle, techMain } from './techData';
 import TechItem from './techItem';
 
 export default function MainTech() {
@@ -16,18 +11,7 @@ export default function MainTech() {
                 aria-labelledby='tech-main'
                 className={`grid auto-rows-fr w-full m-auto ${listStyle}`}
             >
-                {techMainRow1.map((item, index) => (
-                    <TechItem {...item} index={index} key={item.alt} />
-                ))}
-                {techMainRow2.map((item, index, array) => (
-                    <TechItem
-                        reverseAnim
-                        {...item}
-                        index={array.length - 1 - index}
-                        key={item.alt}
-                    />
-                ))}
-                {techMainRow3.map((item, index) => (
+                {techMain.map((item, index) => (
                     <TechItem {...item} index={index} key={item.alt} />
                 ))}
             </ul>
