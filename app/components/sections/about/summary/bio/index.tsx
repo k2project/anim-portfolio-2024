@@ -8,7 +8,7 @@ export default function Bio() {
         useBioAnimation();
 
     return (
-        <div className='md:w-10/12'>
+        <div className='md:w-10/12 sm:pb-20 lg:pb-0'>
             <m.h2
                 style={{ scale: headingScale }}
                 initial={{ scale: 0 }}
