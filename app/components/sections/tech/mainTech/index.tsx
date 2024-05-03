@@ -8,7 +8,7 @@ import TechItem from './techItem';
 
 export default function MainTech() {
     return (
-        <div className='pb-8 md:pb-12'>
+        <div className='pb-8 xl:pb-14'>
             <h3 id='tech-main' className='sr-only'>
                 Main tech stack
             </h3>

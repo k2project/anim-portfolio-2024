@@ -3,11 +3,11 @@ import { ITechLogo } from './type';
 export const techMainRow1: ITechLogo[] = [
     { src: '/anim-portfolio-2024/assets/html.png', alt: 'HTML 5' },
     { src: '/anim-portfolio-2024/assets/css.png', alt: 'CSS 3' },
-    { src: '/anim-portfolio-2024/assets/tailwind.webp', alt: 'Tailwind css' },
+    { src: '/anim-portfolio-2024/assets/tailwind.webp', alt: 'TailwindCSS' },
     { src: '/anim-portfolio-2024/assets/storybook.png', alt: 'Storybook' },
 ];
 export const techMainRow2: ITechLogo[] = [
-    { src: '/anim-portfolio-2024/assets/js.png', alt: 'Java Script' },
+    { src: '/anim-portfolio-2024/assets/js.png', alt: 'JavaScript' },
     { src: '/anim-portfolio-2024/assets/ts.svg', alt: 'Typescript' },
     { src: '/anim-portfolio-2024/assets/react.svg', alt: 'Recta js' },
     { src: '/anim-portfolio-2024/assets/next.png', alt: 'Next js' },
@@ -31,4 +31,4 @@ export const TECH_ROW_SIZE = Math.max(techMainRow1.length, techMainRow2.length);
 export const listStyle =
     'grid-cols-3 md:grid-cols-4 gap-4 max-w-[calc(1920px*0.75)]';
 export const itemStyle =
-    'w-[calc(100vw*.65/3)] h-[calc(100vw*.65/3)] md:w-[calc(100vw*.5/4)] md:h-[calc(100vw*.5/4)] lg:w-[calc(100vw*.6/4)] lg:h-[calc(100vw*.6/4)] max-h-[calc(1920px*0.5/4)] max-w-[calc(1920px*0.5/4)]';
+    'w-[calc(100vw*.65/3)] h-[calc(100vw*.65/3)] md:w-[calc(100vw*.45/4)] md:h-[calc(100vw*.45/4)] max-h-[calc(1920px*0.45/4)] max-w-[calc(1920px*0.45/4)]';

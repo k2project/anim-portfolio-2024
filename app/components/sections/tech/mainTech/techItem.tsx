@@ -27,9 +27,12 @@ export default function TechItem({
                 src={src}
                 alt={alt}
                 fill={true}
-                className='p-4 sm:p-6 lg:p-8 opacity-80'
+                className='p-4 sm:p-6 xl:p-10 opacity-80'
                 sizes='100vw, 50vw, 30vw'
             />
+            {/* <p className='w-full text-center text-xs absolute bottom-2'>
+                {alt}
+            </p> */}
         </m.li>
     );
 }

@@ -30,7 +30,7 @@ export default function WorkHistoryItem({
             >
                 {logo}
             </m.div>
-            <div className='flex flex-1 border-b border-zinc-500 pb-5 items-end'>
+            <div className='flex flex-1 border-b border-zinc-500 pb-4 items-end'>
                 <div>
                     <h4 className='font-semibold uppercase'>{company}</h4>
                     <p className='text-sm capitalize'>{title}</p>

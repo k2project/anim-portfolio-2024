@@ -6,14 +6,14 @@ import Logo from '@components/logos/app';
 export const workHistoryData: IWorkHistoryItem[] = [
     {
         company: 'Estendio',
-        title: 'Software Developer / Senior Frontend Developer',
+        title: 'Software Developer / Senior FE Developer',
         startDate: '2021',
         duration: '3 years',
         logo: <EstendioLogo gradient />,
     },
     {
         company: 'Money Dashboard',
-        title: 'Junior Frontend Developer',
+        title: 'Junior FE Developer',
         startDate: '2020',
         duration: '8 months',
         logo: <MoneyDashboardLogo gradient />,
