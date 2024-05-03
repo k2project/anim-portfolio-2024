@@ -1,5 +1,5 @@
 import { listStyle, techMain } from './techData';
-import TechItem from './techItem';
+import TechItem from './item/techItem';
 
 export default function MainTech() {
     return (

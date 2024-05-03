@@ -1,6 +1,6 @@
 export interface ILogoProps {
     color?: string;
-    size?: number;
+    size?: number | string;
     strokeWidth?: number;
     gradient?: boolean;
     stopColorPrimary?: string;

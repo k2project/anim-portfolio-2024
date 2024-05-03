@@ -31,7 +31,7 @@ const AboutSection: ISection = {
 };
 
 export const TECH_SECTION_FROM_TOP = DEVELOPER_SECTION_H + ABOUT_SECTION_H;
-export const TECH_SECTION_H = 15;
+export const TECH_SECTION_H = 18;
 const TechSection: ISection = {
     height: TECH_SECTION_H, //the intro's animation is automated and doesn't depend on scrolling
     scrollFromTop: TECH_SECTION_FROM_TOP,
