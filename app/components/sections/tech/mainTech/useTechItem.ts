@@ -7,6 +7,7 @@ import {
 } from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
+import { techMain } from './techData';
 
 interface IUseTechItem {
     x: MotionValue<number>;
@@ -25,16 +26,27 @@ export default function useTechItem(index: number): IUseTechItem {
     const isReverseAnimIndex = reverseAnimIndices.includes(index);
     const reverseAnimMultiplier = isReverseAnimIndex ? -1 : 1;
 
-    const orderedIndex = Math.abs((0 - index) % 8);
-    const order = isReverseAnimIndex ? 8 - orderedIndex : orderedIndex;
+    // Animating odd and even rows with the same speed and direction
+    // Groping in two rows with opposite anim direction based on screen size
+    const smallScreenRowGroup = 6;
+    const largerScreenRowGroup = 8;
+    const rowGrouping = isSmallerScreen
+        ? smallScreenRowGroup
+        : largerScreenRowGroup;
+    const orderedIndex = Math.abs((0 - index) % rowGrouping);
+    const order = isReverseAnimIndex
+        ? techMain.length - 1 - orderedIndex
+        : orderedIndex;
+    // The animation speed depends
+    const animSpeed = isSmallerScreen ? 0.25 : 0.5;
 
     const x = useTransform(
         scrollY,
         [
             techSectionFromTop - windowHeight,
-            techSectionFromTop + windowWidth + (order * windowWidth) / 8,
+            techSectionFromTop + windowHeight * animSpeed * order,
         ],
-        [windowWidth * reverseAnimMultiplier, 0]
+        [windowHeight * 2 * reverseAnimMultiplier, 0]
     );
 
     return { x };

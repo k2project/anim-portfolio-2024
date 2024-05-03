@@ -15,7 +15,7 @@ export default function TechItem({ src, alt, index }: ITechItemProps) {
 
     return (
         <m.li
-            className={`relative bg-tertiary rounded-md inline-block border-none drop-shadow-lg border-primary ${itemStyle}`}
+            className={`relative bg-tertiary rounded-md inline-block border-none drop-shadow-lg border-primary ${itemStyle} transform-gpu`}
             style={{ x }}
         >
             <Image
