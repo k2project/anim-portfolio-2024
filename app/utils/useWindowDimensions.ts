@@ -11,16 +11,13 @@ type WindowDimensions = {
     windowHeight: number;
 };
 
-interface IUseWindowDimensions extends WindowDimensions {
-    windowSmallestDimension: number;
-}
+interface IUseWindowDimensions extends WindowDimensions {}
 
 const useWindowDimensions = (): IUseWindowDimensions => {
     const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({
         windowWidth: 0,
         windowHeight: 0,
     });
-    const [windowSmallestDimension, setWindowSmallestDimension] = useState(0);
 
     useEffect(() => {
         function handleResize(): void {
@@ -28,16 +25,13 @@ const useWindowDimensions = (): IUseWindowDimensions => {
                 windowWidth: window.innerWidth,
                 windowHeight: window.innerHeight,
             });
-            setWindowSmallestDimension(
-                Math.min(window.innerWidth, window.innerHeight, MAX_DESKTOP)
-            );
         }
         handleResize();
         window.addEventListener('resize', handleResize);
         return (): void => window.removeEventListener('resize', handleResize);
     }, []);
 
-    return { ...windowDimensions, windowSmallestDimension };
+    return windowDimensions;
 };
 
 export default useWindowDimensions;
