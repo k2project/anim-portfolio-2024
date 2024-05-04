@@ -25,7 +25,7 @@ export const techMain: ITechLogo[] = [
 export const listStyle =
     'grid-cols-3 md:grid-cols-4 gap-4 max-w-[calc(1920px*0.75)]';
 export const itemStyle =
-    'w-[calc(100vw*.65/3)] h-[calc(100vw*.65/3)] md:w-[calc(100vw*.45/4)] md:h-[calc(100vw*.45/4)] max-h-[calc(1920px*0.45/4)] max-w-[calc(1920px*0.45/4)]';
+    'w-[calc(100vw*.75/3)] h-[calc(100vw*.75/3)] sm:w-[calc(100vw*.5/3)] sm:h-[calc(100vw*.5/3)] md:w-[calc(100vw*.5/4)] md:h-[calc(100vw*.5/4)] max-h-[calc(1920px*0.45/4)] max-w-[calc(1920px*0.45/4)]';
 
 export const techSecondary = [
     'Git',

@@ -5,7 +5,8 @@ import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
 
 interface IUseSecondaryTechSectionAnimation {
-    y: MotionValue<number>;
+    mainY: MotionValue<number>;
+    secondaryY: MotionValue<number>;
     initialY: number;
 }
 export default function useSecondaryTechSectionAnimation(): IUseSecondaryTechSectionAnimation {
@@ -16,7 +17,7 @@ export default function useSecondaryTechSectionAnimation(): IUseSecondaryTechSec
 
     const initialY = -windowHeight / 5;
     //Animates the content in
-    const y = useTransform(
+    const secondaryY = useTransform(
         scrollY,
         [
             techSectionFromTop + windowHeight * 12,
@@ -24,6 +25,15 @@ export default function useSecondaryTechSectionAnimation(): IUseSecondaryTechSec
         ],
         [initialY, 0]
     );
+    const mainY = useTransform(
+        scrollY,
+        [
+            techSectionFromTop,
+            techSectionFromTop + windowHeight * 12,
+            techSectionFromTop + windowHeight * 13.5,
+        ],
+        [0, 0, initialY]
+    );
 
-    return { y, initialY };
+    return { secondaryY, initialY, mainY };
 }

@@ -13,7 +13,7 @@ export default function BackFaceContent({ src, alt }: ITechLogo) {
                     sizes='100vw, 50vw, 30vw'
                 />
             </div>
-            <p className='absolute h-full w-full top-full bg-primary p-4 text-tertiary rounded-sm text-center text-lg font-medium group-hover:top-0 transition-all duration-700 flex justify-center items-center'>
+            <p className='absolute h-full w-full top-full bg-primary p-4 text-tertiary rounded-sm text-center text-sm sm:text-lg font-medium group-hover:top-0 transition-all duration-700 flex justify-center items-center'>
                 {alt}
             </p>
         </div>
