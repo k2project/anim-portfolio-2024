@@ -6,6 +6,7 @@ import useSections from './useSections';
 import AboutSection from './about';
 import TechSection from './tech';
 import { m } from 'framer-motion';
+import RecommendationsSection from './recommendations';
 
 export default function Sections() {
     const { showScrollableSections, enableScrolling } = useSections();
@@ -23,6 +24,7 @@ export default function Sections() {
                     <DeveloperSection />
                     <AboutSection />
                     <TechSection />
+                    <RecommendationsSection />
                 </m.div>
             )}
         </>

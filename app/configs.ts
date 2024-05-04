@@ -17,7 +17,7 @@ const IntroSection: ISection = {
 
 export const DEVELOPER_SECTION_H = 3;
 const DeveloperSection: ISection = {
-    height: DEVELOPER_SECTION_H, //the intro's animation is automated and doesn't depend on scrolling
+    height: DEVELOPER_SECTION_H,
     scrollFromTop: 0,
     zIndex: 'z-[1]', //sections indices are custom classes from 0 to sections.length -1
 };
@@ -25,18 +25,28 @@ const DeveloperSection: ISection = {
 export const ABOUT_SECTION_H = 10;
 export const ABOUT_SECTION_FROM_TOP = DEVELOPER_SECTION_H;
 const AboutSection: ISection = {
-    height: ABOUT_SECTION_H, //the intro's animation is automated and doesn't depend on scrolling
+    height: ABOUT_SECTION_H,
     scrollFromTop: ABOUT_SECTION_FROM_TOP,
     zIndex: 'z-[2]', //sections indices are custom classes from 0 to sections.length -1
 };
 
 export const TECH_SECTION_FROM_TOP = DEVELOPER_SECTION_H + ABOUT_SECTION_H;
-export const TECH_SECTION_H = 18;
+export const TECH_SECTION_H = 17;
 const TechSection: ISection = {
-    height: TECH_SECTION_H, //the intro's animation is automated and doesn't depend on scrolling
+    height: TECH_SECTION_H,
     scrollFromTop: TECH_SECTION_FROM_TOP,
     zIndex: 'z-[3]', //sections indices are custom classes from 0 to sections.length -1
     bg: 'bg-tertiary',
+};
+
+export const RECOMMENDATIONS_SECTION_FROM_TOP =
+    DEVELOPER_SECTION_H + ABOUT_SECTION_H + TECH_SECTION_H;
+export const RECOMMENDATIONS_SECTION_H = 18;
+const RecommendationsSection: ISection = {
+    height: RECOMMENDATIONS_SECTION_H,
+    scrollFromTop: RECOMMENDATIONS_SECTION_FROM_TOP,
+    zIndex: 'z-[4]', //sections indices are custom classes from 0 to sections.length -1
+    bg: 'bg-primary',
 };
 
 export const SectionsData: { [key: string]: ISection } = {
@@ -44,4 +54,5 @@ export const SectionsData: { [key: string]: ISection } = {
     [Sections.Developer]: DeveloperSection,
     [Sections.About]: AboutSection,
     [Sections.Tech]: TechSection,
+    [Sections.Recommendations]: RecommendationsSection,
 };
