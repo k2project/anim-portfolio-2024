@@ -2,6 +2,7 @@ import { ISection, Sections } from '@types';
 
 export const MAX_DESKTOP = 1920; //max size of the content wrapper on larger desktops
 export const SMALL_SCREEN_BREAKING_POINT = 1024; //TW lg:
+export const MOBILE_SCREEN_BREAKING_POINT = 768; //TW md:
 
 // Used for svg
 export const COLOR_PRIMARY = '#312f38';
@@ -30,7 +31,7 @@ const AboutSection: ISection = {
     zIndex: 'z-[2]', //sections indices are custom classes from 0 to sections.length -1
 };
 
-export const TECH_SECTION_FROM_TOP = DEVELOPER_SECTION_H + ABOUT_SECTION_H;
+export const TECH_SECTION_FROM_TOP = ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H;
 export const TECH_SECTION_H = 17;
 const TechSection: ISection = {
     height: TECH_SECTION_H,
@@ -40,13 +41,21 @@ const TechSection: ISection = {
 };
 
 export const RECOMMENDATIONS_SECTION_FROM_TOP =
-    DEVELOPER_SECTION_H + ABOUT_SECTION_H + TECH_SECTION_H;
+    TECH_SECTION_FROM_TOP + TECH_SECTION_H;
 export const RECOMMENDATIONS_SECTION_H = 18;
 const RecommendationsSection: ISection = {
     height: RECOMMENDATIONS_SECTION_H,
     scrollFromTop: RECOMMENDATIONS_SECTION_FROM_TOP,
     zIndex: 'z-[4]', //sections indices are custom classes from 0 to sections.length -1
     bg: 'bg-primary',
+};
+export const ENDING_SECTION_FROM_TOP =
+    RECOMMENDATIONS_SECTION_FROM_TOP + RECOMMENDATIONS_SECTION_H;
+export const ENDING_SECTION_H = 10;
+const EndingSection: ISection = {
+    height: ENDING_SECTION_H,
+    scrollFromTop: ENDING_SECTION_FROM_TOP,
+    zIndex: 'z-[5]', //sections indices are custom classes from 0 to sections.length -1
 };
 
 export const SectionsData: { [key: string]: ISection } = {
@@ -55,4 +64,5 @@ export const SectionsData: { [key: string]: ISection } = {
     [Sections.About]: AboutSection,
     [Sections.Tech]: TechSection,
     [Sections.Recommendations]: RecommendationsSection,
+    [Sections.Ending]: EndingSection,
 };

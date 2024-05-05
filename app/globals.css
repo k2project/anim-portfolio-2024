@@ -48,4 +48,18 @@ body:-webkit-scrollbar {
     .flip-card-back {
         transform: rotateY(180deg);
     }
+    @keyframes animatedBackground {
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: 200% 0;
+        }
+    }
+
+    .bg-gradient-animated {
+        background-size: 200%;
+        @apply bg-left-bottom bg-fixed bg-repeat-x bg-gradient-to-r from-contrast via-yellow-500 to-contrast text-transparent bg-clip-text;
+        animation: animatedBackground 5s linear infinite reverse;
+    }
 }

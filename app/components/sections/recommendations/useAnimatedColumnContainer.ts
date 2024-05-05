@@ -23,7 +23,7 @@ export function useAnimatedColumnContainer(reversedAnim: boolean) {
     }, [windowHeight, windowWidth]);
 
     const initialY = reversedAnim ? -colH - windowHeight / 2 : windowHeight;
-    const finalY = reversedAnim ? 30 : -colH + windowHeight - 20;
+    const finalY = reversedAnim ? windowHeight : -colH;
     const y = useTransform(
         scrollY,
         [

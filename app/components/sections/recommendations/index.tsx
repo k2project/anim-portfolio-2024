@@ -3,7 +3,6 @@
 import SectionWrapper from '@components/sectionWrapper';
 import { SectionsData } from '@configs';
 import { Sections } from '@types';
-import React from 'react';
 import useRecommendationsSectionAnimation from './useRecommendationsSectionAnimation';
 import {
     recommendationsColLeft,
