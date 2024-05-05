@@ -23,7 +23,7 @@ export default function useFooterAnimation(): IUseFooterAnimation {
             endingSectionFromTop + endingSectionHeight - windowHeight * 1.5,
             endingSectionFromTop + endingSectionHeight - windowHeight,
         ],
-        [initialRotate, 0]
+        [initialRotate, -720]
     );
 
     const scrollingTextScale = useTransform(

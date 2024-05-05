@@ -51,7 +51,7 @@ const RecommendationsSection: ISection = {
 };
 export const ENDING_SECTION_FROM_TOP =
     RECOMMENDATIONS_SECTION_FROM_TOP + RECOMMENDATIONS_SECTION_H;
-export const ENDING_SECTION_H = 10;
+export const ENDING_SECTION_H = 4;
 const EndingSection: ISection = {
     height: ENDING_SECTION_H,
     scrollFromTop: ENDING_SECTION_FROM_TOP,

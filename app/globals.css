@@ -29,6 +29,17 @@ body:-webkit-scrollbar {
     .text-gradient-theme {
         @apply bg-gradient-to-r from-contrast via-orange-400 to-yellow-500 text-transparent bg-clip-text;
     }
+
+    .text-gradient-animated {
+        background-size: 200%;
+        @apply bg-left-bottom bg-fixed bg-repeat-x bg-gradient-to-r from-contrast via-yellow-500 to-contrast text-transparent bg-clip-text;
+        animation: animatedBackground 5s linear infinite reverse;
+    }
+    .bg-gradient-animated {
+        background-size: 200%;
+        @apply bg-left-bottom bg-fixed bg-repeat-x bg-gradient-to-r from-contrast via-orange-500 to-contrast;
+        animation: animatedBackground 5s linear infinite reverse;
+    }
     .perspective-1000 {
         perspective: 1000px;
     }
@@ -57,7 +68,7 @@ body:-webkit-scrollbar {
         }
     }
 
-    .bg-gradient-animated {
+    .text-gradient-animated {
         background-size: 200%;
         @apply bg-left-bottom bg-fixed bg-repeat-x bg-gradient-to-r from-contrast via-yellow-500 to-contrast text-transparent bg-clip-text;
         animation: animatedBackground 5s linear infinite reverse;

@@ -4,8 +4,7 @@ import { m } from 'framer-motion';
 import useBioAnimation from './useBioAnimation';
 
 export default function Bio() {
-    const { headingScale, textY, windowHeight, textOpacity } =
-        useBioAnimation();
+    const { headingScale, textY, textOpacity } = useBioAnimation();
 
     return (
         <div className='md:w-10/12 sm:pb-20 lg:pb-0'>
@@ -18,7 +17,7 @@ export default function Bio() {
             </m.h2>
             <m.div
                 style={{ y: textY, opacity: textOpacity }}
-                initial={{ y: windowHeight, opacity: 0 }}
+                initial={{ y: 100, opacity: 0 }}
             >
                 <p className='font-medium uppercase text-base lg:text-xl'>
                     Working with startups and private clients to design and

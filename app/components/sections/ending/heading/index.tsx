@@ -3,26 +3,50 @@
 import { m } from 'framer-motion';
 import useHeadingAnimation from './useHeadingAnimation';
 
-// import Link from 'next/link';
-
 export default function Heading() {
-    const { headingScale } = useHeadingAnimation();
+    const {
+        headingScale,
+        windowHeight,
+        paragraphY,
+        paragraphOpacity,
+        linkY,
+        linkOpacity,
+    } = useHeadingAnimation();
 
     return (
         <div>
             <m.div style={{ scale: headingScale }} initial={{ scale: 0 }}>
-                <h2 className='text-5xl md:text-8xl font-bold bg-gradient-animated py-4 uppercase'>
-                    HAVING FUN <br /> together
+                <h2 className='text-6xl md:text-8xl font-bold text-gradient-animated py-4 uppercase'>
+                    Calling
                 </h2>
             </m.div>
-            {/* <Link
-        href='https://www.linkedin.com/in/kris-kopczynski-8855001b0/'
-        target='_blank'
-        rel='noopener noreferrer'
-        className='underline text-lg'
-    >
-        Message me on LinkedIn
-    </Link> */}
+            <m.p
+                className='text-xl font medium px-6'
+                style={{ y: paragraphY, opacity: paragraphOpacity }}
+                initial={{ y: 50, opacity: 0 }}
+            >
+                AN EXPERIENCED AND DEDICATED TEAM <br />
+                WITH PASSION FOR EXCELLENCE AND MENTORING.
+            </m.p>
+
+            <m.p
+                className='text-lg pt-16'
+                style={{ y: linkY, opacity: linkOpacity }}
+                initial={{ y: 50, opacity: 0 }}
+            >
+                <strong className='font-semibold block'>
+                    LET'S WORK TOGETHER!
+                </strong>
+                Get in touch on{' '}
+                <a
+                    href='https://www.linkedin.com/in/kris-kopczynski-8855001b0/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-gradient-theme font-medium cursor-pointer underline'
+                >
+                    LinkedIn.
+                </a>
+            </m.p>
         </div>
     );
 }

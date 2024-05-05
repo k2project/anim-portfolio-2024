@@ -7,13 +7,14 @@ import useSecondaryTechSectionAnimation from './useSecondaryTechAnimation';
 export const MAIN_STACK_HEADING_ID = 'tech-main-stack';
 
 export default function SecondaryTech() {
-    const { mainY, secondaryY, initialY } = useSecondaryTechSectionAnimation();
+    const { mainY, secondaryY, initialY, mainOpacity, secondaryOpacity } =
+        useSecondaryTechSectionAnimation();
 
     return (
-        <div className='relative hidden md:block text-center text-primary md:pb-6 xl:pb-8 overflow-hidden'>
+        <div className='relative hidden md:block text-center text-primary md:pb-6 xl:pb-8'>
             <m.div
                 className='absolute w-full top-0 left-0'
-                style={{ y: mainY }}
+                style={{ y: mainY, opacity: mainOpacity }}
             >
                 <h3 id={MAIN_STACK_HEADING_ID} className='xl:text-xl font-bold'>
                     MAIN TECH STACK
@@ -21,8 +22,8 @@ export default function SecondaryTech() {
             </m.div>
             <m.div
                 className='relative'
-                style={{ y: secondaryY }}
-                initial={{ y: initialY }}
+                style={{ y: secondaryY, opacity: secondaryOpacity }}
+                initial={{ y: initialY, opacity: 0 }}
             >
                 <h3 className='xl:text-xl font-bold'>FAMILIAR WITH</h3>
                 <p className='text-sm xl:text-lg pt-2 font-medium'>

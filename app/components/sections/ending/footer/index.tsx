@@ -16,7 +16,7 @@ export default function Footer() {
             >
                 <Logo size={20} color='white' />
             </m.div>
-            <div className='relative text-centered pt-4 pb-4 text-xs uppercase'>
+            <div className='relative text-centered pt-2 pb-4 text-xs uppercase'>
                 <m.p
                     className='absolute w-full'
                     style={{ scale: scrollingTextScale }}
