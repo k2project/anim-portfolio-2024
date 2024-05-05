@@ -11,7 +11,7 @@ export default function Heading() {
     return (
         <div>
             <m.div style={{ scale: headingScale }} initial={{ scale: 0 }}>
-                <h2 className='text-8xl font-bold bg-gradient-animated py-4 uppercase'>
+                <h2 className='text-5xl md:text-8xl font-bold bg-gradient-animated py-4 uppercase'>
                     HAVING FUN <br /> together
                 </h2>
             </m.div>
