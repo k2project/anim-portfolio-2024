@@ -157,7 +157,7 @@ const BenScott: IRecommendation = {
             </p>
         </>
     ),
-    avatar: 'https://media.licdn.com/dms/image/D4E03AQGSSFi6NI_guA/profile-displayphoto-shrink_100_100/0/1669894862663?e=1718236800&v=beta&t=NBSStdvj4jmhHP4_E-jJteLpJRW2vsrtzFXfiUQiZvs',
+    avatar: 'https://media.licdn.com/dms/image/D4E03AQFT_fb21ORa1g/profile-displayphoto-shrink_100_100/0/1714492334532?e=1720051200&v=beta&t=02S-zLcr7aaeSlw3Ir9eE9sPSCYXi_JGwdffGB4n-mA',
 };
 const AlexanderBierton: IRecommendation = {
     author: 'Alexander Bierton',
@@ -270,7 +270,7 @@ const LucyWilson: IRecommendation = {
             </p>
         </>
     ),
-    avatar: 'https://media.licdn.com/dms/image/C5603AQGhC4grv8mTxw/profile-displayphoto-shrink_100_100/0/1641747994545?e=1718236800&v=beta&t=WTE8gXRfCd4swY6bQt-qViSlo80hBD1KIET0cbOY2ls',
+    avatar: 'https://media.licdn.com/dms/image/D4E03AQGDrJuEqCZFtA/profile-displayphoto-shrink_100_100/0/1714390847147?e=1720656000&v=beta&t=Ki_9Ub4urjs7vvyqcWkU8R6S7f8Psn3tWg0vEMjioK8',
 };
 const FraserMerrifield: IRecommendation = {
     author: 'Fraser Merrifield',
