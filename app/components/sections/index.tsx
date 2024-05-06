@@ -19,7 +19,7 @@ export default function Sections() {
                     animate={{ opacity: 1 }}
                     initial={{ opacity: 0 }}
                     transition={{
-                        delay: 0.25, // Allows for smooth loading of all sections while the screen dimensions are computed
+                        delay: 0.5, // Allows for smooth loading of all sections while the screen dimensions are computed
                     }}
                 >
                     <DeveloperSection />

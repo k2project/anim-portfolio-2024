@@ -28,7 +28,7 @@ export default function Footer() {
                     initial={{ scale: 0 }}
                     style={{ scale: nameTextScale }}
                 >
-                    Krzysztof Kopczynski @ 20204
+                    Krzysztof Kopczynski &copy; 20204
                 </m.p>
             </div>
         </div>

@@ -19,7 +19,7 @@ export default function TechSection() {
             y={sectionY}
         >
             <div className='flex w-full h-full justify-center items-center'>
-                <div>
+                <div className='text-center'>
                     <MainTech />
                     <SecondaryTech />
                     <Buttons />

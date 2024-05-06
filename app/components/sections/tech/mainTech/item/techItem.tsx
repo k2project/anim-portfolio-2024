@@ -19,7 +19,7 @@ export default function TechItem({ src, alt, index }: ITechItemProps) {
             <AnimatedFlipCard
                 containerStyle={itemStyle}
                 rotateY={rotateY}
-                frontFaceContent={<Logo gradient size='50%' />}
+                frontFaceContent={<Logo size='50%' />}
                 backFaceContent={<BackFaceContent src={src} alt={alt} />}
             />
         </li>

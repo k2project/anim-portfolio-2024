@@ -21,7 +21,7 @@ export default function AnimatedFlipCard({
             className={`perspective-1000 bg-transparent rounded-lg ${containerStyle}`}
         >
             <m.div
-                className='relative w-full h-full preserve-3d transition-all shadow-lg rounded-lg transform-gpu'
+                className='relative w-full h-full preserve-3d transition-all border border-primary rounded-lg transform-gpu'
                 style={{ rotateY }}
             >
                 <div
