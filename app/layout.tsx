@@ -2,6 +2,14 @@ import type { Metadata } from 'next';
 import './globals.css';
 import AccessibilityWrapper from '@utils/accessibility/accessibilityWrapper';
 import AnimationWrapper from '@utils/animation/animationWrapper';
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+    style: ['normal', 'italic'],
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 export const metadata: Metadata = {
     title: 'Kris Kopczynski - Software Developer',
@@ -22,19 +30,8 @@ export default function RootLayout({
                     type='image/png'
                     sizes='32x32'
                 />
-                <link rel='preconnect' href='https://fonts.googleapis.com' />
-                <link
-                    rel='preconnect'
-                    href='https://fonts.gstatic.com'
-                    crossOrigin='anonymous'
-                />
-
-                <link
-                    href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'
-                    rel='stylesheet'
-                />
             </head>
-            <body>
+            <body className={montserrat.className}>
                 <AccessibilityWrapper>
                     <AnimationWrapper>{children}</AnimationWrapper>
                 </AccessibilityWrapper>
