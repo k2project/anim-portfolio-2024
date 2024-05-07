@@ -1,8 +1,8 @@
 import teamworkAnim from './lotties/teamwork.json';
 import pencilAnim from './lotties/pencil.json';
 import bulbAnim from './lotties/bulb.json';
-import smileAnim from './lotties/smile.json';
-import briefcaseAnim from './lotties/briefcase.json';
+import okAnim from './lotties/ok.json';
+import shieldAnim from './lotties/shield.json';
 import { ILottieList } from './types';
 
 export const animList: ILottieList[] = [
@@ -15,11 +15,11 @@ export const animList: ILottieList[] = [
         heading: 'Committed team player',
     },
     {
-        animationData: briefcaseAnim,
+        animationData: shieldAnim,
         heading: 'Strong work ethics',
     },
     {
-        animationData: smileAnim,
+        animationData: okAnim,
         heading: 'Positive "can do" attitude',
     },
     {

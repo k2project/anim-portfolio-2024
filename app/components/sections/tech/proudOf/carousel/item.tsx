@@ -28,7 +28,7 @@ export default function CarouselItem({
                 height: size,
             }}
         >
-            <div className='absolute left-0 top-0  w-full h-full rounded-full border-2 border-primary' />
+            <div className='absolute left-0 top-0 w-full h-full rounded-full border-2 border-primary' />
             <m.div style={{ scale }}>
                 <Lottie options={defaultOptions} width='90%' height='90%' />
             </m.div>
