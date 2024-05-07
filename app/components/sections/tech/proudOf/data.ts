@@ -9,26 +9,26 @@ export const animList: ILottieList[] = [
     {
         animationData: pencilAnim,
         heading: 'Self-taught & avid learner',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, pariatur itaque, minima sed veniam modi esse eveniet eat blanditiis impedit',
+        text: 'I am driven by an insatiable curiosity and passion for lifelong learning, constantly exploring new technologies to expand my expertise.',
     },
     {
         animationData: teamworkAnim,
         heading: 'Committed team player',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, pariatur itaque, minima sed veniam modi esse eveniet eat blanditiis impedit',
+        text: 'I excel at collaborating seamlessly with cross-functional teams, leveraging my solid communication skills and ability to clearly articulate ideas to drive projects forward efficiently and effectively.',
     },
     {
         animationData: shieldAnim,
         heading: 'Strong work ethics',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, pariatur itaque, minima sed veniam modi esse eveniet eat blanditiis impedit',
+        text: 'My diligence and an uncompromising pursuit of excellence, is the foundation of my success as a software developer.',
     },
     {
         animationData: okAnim,
         heading: 'Positive "can do" attitude',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, pariatur itaque, minima sed veniam modi esse eveniet eat blanditiis impedit',
+        text: 'I approach every challenge with enthusiasm and a steadfast determination to find solutions.',
     },
     {
         animationData: bulbAnim,
         heading: 'Creative problem solver',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, pariatur itaque, minima sed veniam modi esse eveniet eat blanditiis impedit',
+        text: 'My ability to think creatively and approach software challenges with innovative solutions sets me apart as a versatile and invaluable developer.',
     },
 ];

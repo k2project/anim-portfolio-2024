@@ -43,12 +43,12 @@ export default function useCarouselItemsHeadingAnimation(
         [
             startDistance +
                 scrollableDistancePerIndex * index -
-                1.2 * windowHeight,
+                1.1 * windowHeight,
             startDistance + scrollableDistancePerIndex * index - windowHeight,
             startDistance + scrollableDistancePerIndex * index + windowHeight,
             startDistance +
                 scrollableDistancePerIndex * index +
-                windowHeight * 1.2,
+                windowHeight * 2,
         ],
         [0, 1, 1, 0]
     );
