@@ -12,11 +12,11 @@ export const techMain: ITechLogo[] = [
         alt: 'Recta JS + React Native',
     },
     { src: '/anim-portfolio-2024/assets/next.png', alt: 'Next JS' },
-    { src: '/anim-portfolio-2024/assets/redux.png', alt: 'Redux' },
+    { src: '/anim-portfolio-2024/assets/redux.png', alt: 'Redux + Jotai' },
     { src: '/anim-portfolio-2024/assets/jest.png', alt: 'Jest' },
     {
         src: '/anim-portfolio-2024/assets/githubactions.svg',
-        alt: 'GitHub Actions',
+        alt: 'GitHub Actions + Git',
     },
     { src: '/anim-portfolio-2024/assets/docker.webp', alt: 'Docker' },
 ];
@@ -28,15 +28,3 @@ export const techMain: ITechLogo[] = [
 export const listStyle = 'grid-cols-3 md:grid-cols-4 gap-2';
 export const itemStyle =
     'w-[calc(100vw*.75/3)] h-[calc(100vw*.75/3)] sm:w-[calc(100vw*.5/3)] sm:h-[calc(100vw*.5/3)] md:w-[calc(100vw*.5/4)] md:h-[calc(100vw*.5/4)] max-h-[calc(1920px*0.45/4)] max-w-[calc(1920px*0.45/4)]';
-
-export const techSecondary = [
-    'Git',
-    'Node.js',
-    'Express.js',
-    'Python',
-    'PHP',
-    'Laravel',
-    'RESTful API',
-    'MySQL',
-    'MangoDB',
-];
