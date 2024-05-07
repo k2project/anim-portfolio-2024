@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Buttons() {
     return (
-        <div className='md:space-x-6 text-center flex justify-center'>
+        <div className='md:space-x-6 text-center flex justify-center mt-16'>
             <Link
                 href='https://github.com/k2project'
                 target='_blank'

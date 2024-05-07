@@ -1,18 +1,14 @@
-import {
-    SMALL_SCREEN_BREAKING_POINT,
-    TECH_SECTION_FROM_TOP,
-    TECH_SECTION_H,
-} from '@configs';
+import { TECH_SECTION_FROM_TOP, TECH_SECTION_H } from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { useScroll, useTransform } from 'framer-motion';
 import { animList } from '../data';
 
+export const CAROUSEL_IN_VIEW = 19; //section scrolled height
 export default function useCarouselAnimation(index: number) {
     const { scrollY } = useScroll();
     const { windowHeight, windowWidth } = useWindowDimensions();
     const techSectionFromTop = TECH_SECTION_FROM_TOP * windowHeight;
     const techSectionH = TECH_SECTION_H * windowHeight;
-    const isSmallerScreen = windowWidth < SMALL_SCREEN_BREAKING_POINT;
 
     // Size of centered item
     const listLength = animList.length;
@@ -21,7 +17,7 @@ export default function useCarouselAnimation(index: number) {
     const itemBaseSize = Math.max(itemMinSize, screenSize);
     // All items sizes
     const itemsSizes = [itemBaseSize, 90, 70, 55, 40];
-    const startDistance = techSectionFromTop + windowHeight * 19;
+    const startDistance = techSectionFromTop + windowHeight * CAROUSEL_IN_VIEW;
     const endDistance = techSectionFromTop + techSectionH - windowHeight;
     const scrollableDistance = endDistance - startDistance;
     const scrollInterval = scrollableDistance / listLength;

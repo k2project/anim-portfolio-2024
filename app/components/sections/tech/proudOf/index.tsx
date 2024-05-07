@@ -9,7 +9,7 @@ export default function ProudOf() {
     // Positioned absolutely to occupy the space of tech stack when it is animated out
     return (
         <m.div
-            className='absolute w-full overflow-hidden sm:overflow-visible h-full top-0 left-0 transform-gpu origin-center flex justify-center'
+            className='absolute w-full overflow-hidden sm:overflow-visible h-full -top-12 sm:top-0 left-0 transform-gpu origin-center flex justify-center'
             initial={{ scale: 0 }}
             style={{ scale }}
         >
