@@ -32,7 +32,7 @@ const AboutSection: ISection = {
 };
 
 export const TECH_SECTION_FROM_TOP = ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H;
-export const TECH_SECTION_H = 17;
+export const TECH_SECTION_H = 40;
 const TechSection: ISection = {
     height: TECH_SECTION_H,
     scrollFromTop: TECH_SECTION_FROM_TOP,

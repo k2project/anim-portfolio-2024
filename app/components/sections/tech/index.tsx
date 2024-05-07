@@ -6,8 +6,9 @@ import { Sections } from '@types';
 import React from 'react';
 import useTechSectionAnimation from './useTechSectionAnimation';
 import MainTech from './mainTech';
-import SecondaryTech from './secondaryTech';
+import TechHeadings from './headings';
 import Buttons from './links';
+import ProudOf from './proudOf';
 
 export default function TechSection() {
     const { sectionY, initialY } = useTechSectionAnimation();
@@ -20,8 +21,11 @@ export default function TechSection() {
         >
             <div className='flex w-full h-full justify-center items-center'>
                 <div className='text-center'>
-                    <MainTech />
-                    <SecondaryTech />
+                    <div className='relative'>
+                        <MainTech />
+                        <ProudOf />
+                    </div>
+                    <TechHeadings />
                     <Buttons />
                 </div>
             </div>

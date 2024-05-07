@@ -13,7 +13,7 @@ export default function Bio() {
                 initial={{ scale: 0 }}
                 className='font-bold uppercase text-5xl xl:text-7xl pb-6 origin-left text-gradient-theme'
             >
-                Experience, Skills &amp; more...
+                Experience, Skills and more...
             </m.h2>
             <m.div
                 style={{ y: textY, opacity: textOpacity }}

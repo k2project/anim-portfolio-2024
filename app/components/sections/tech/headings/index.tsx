@@ -2,13 +2,13 @@
 
 import { m } from 'framer-motion';
 import { techSecondary } from '../mainTech/techData';
-import useSecondaryTechSectionAnimation from './useSecondaryTechAnimation';
+import useTechHeadingsAnimation from './useTechHeadingsAnimation';
 
 export const MAIN_STACK_HEADING_ID = 'tech-main-stack';
 
-export default function SecondaryTech() {
+export default function TechHeadings() {
     const { mainY, secondaryY, initialY, mainOpacity, secondaryOpacity } =
-        useSecondaryTechSectionAnimation();
+        useTechHeadingsAnimation();
 
     return (
         <div className='relative hidden md:block text-center text-primary md:pb-6 xl:pb-8'>
