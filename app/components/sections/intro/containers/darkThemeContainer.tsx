@@ -15,7 +15,7 @@ export default function DarkThemeContainer() {
             <div className='absolute bottom-0 w-full h-screen flex justify-center items-center pb-28'>
                 <m.div style={{ opacity, scale }}>
                     <m.div id='logo-dark-container' className='relative'>
-                        <SharedLogo gradient={false} />
+                        <SharedLogo gradient={false} animated={false} />
                     </m.div>
                 </m.div>
                 <m.div
