@@ -22,6 +22,7 @@ export default function LottieCarousel() {
                     <li key={index + '-proud-of'}>
                         <CarouselItem
                             animationData={item.animationData}
+                            opacity={item.opacity}
                             index={index}
                         />
                     </li>
