@@ -5,6 +5,7 @@ import IntroSection from '@components/sections/intro';
 import useSections from './useSections';
 import { m } from 'framer-motion';
 
+const ProgressBar = lazy(() => import('@components/progressBar'));
 const DeveloperSection = lazy(() => import('./developer'));
 const AboutSection = lazy(() => import('./about'));
 const TechSection = lazy(() => import('./tech'));
@@ -24,6 +25,7 @@ export default function Sections() {
                         delay: 0.75, // Allows for smooth loading of all sections while the screen dimensions are computed
                     }}
                 >
+                    <ProgressBar />
                     <DeveloperSection />
                     <AboutSection />
                     <TechSection />
