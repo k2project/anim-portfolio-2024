@@ -5,8 +5,8 @@ import AnimationWrapper from '@utils/animation/animationWrapper';
 import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
-    style: ['normal', 'italic'],
+    weight: ['300', '600', '700'],
+    style: ['normal'],
     subsets: ['latin'],
     display: 'swap',
 });

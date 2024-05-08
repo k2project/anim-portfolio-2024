@@ -5,7 +5,7 @@ export default function LightThemeContainer() {
     return (
         <div className='absolute bottom-0 w-full h-full flex justify-center items-center pb-28'>
             <SharedLogo gradient={true} />
-            <div className='text-center text-primary absolute bottom-24 font-medium whitespace-pre-line'>
+            <div className='text-center text-primary absolute bottom-24 whitespace-pre-line'>
                 <h1 className='md:text-xl capitalize tracking-[.25rem] font-bold'>
                     <SlideInOut text=' Krzysztof  Kopczynski' />
                 </h1>

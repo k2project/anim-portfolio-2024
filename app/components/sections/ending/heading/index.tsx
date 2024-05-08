@@ -42,7 +42,7 @@ export default function Heading() {
                     href='https://www.linkedin.com/in/kris-kopczynski-8855001b0/'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='text-gradient-theme font-medium cursor-pointer underline'
+                    className='text-gradient-theme font-semibold cursor-pointer underline'
                 >
                     LinkedIn.
                 </a>

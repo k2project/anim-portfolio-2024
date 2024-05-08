@@ -19,7 +19,7 @@ export default function Bio() {
                 style={{ y: textY, opacity: textOpacity }}
                 initial={{ y: 100, opacity: 0 }}
             >
-                <p className='font-medium uppercase text-base lg:text-xl'>
+                <p className='uppercase text-base lg:text-xl'>
                     Working with startups and private clients to design and
                     build robust and scalable mobile and web applications that
                     people love to use.
