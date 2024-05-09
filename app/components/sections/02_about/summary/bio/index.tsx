@@ -11,7 +11,7 @@ export default function Bio() {
             <m.h2
                 style={{ scale: headingScale }}
                 initial={{ scale: 0 }}
-                className='font-bold uppercase text-4xl xl:text-7xl pb-6 origin-left text-gradient-theme'
+                className='font-bold uppercase text-4xl lg:text-6xl pb-6 origin-left text-gradient-theme'
             >
                 Experience, Skills and more...
             </m.h2>

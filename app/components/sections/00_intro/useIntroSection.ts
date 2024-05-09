@@ -11,7 +11,7 @@ export default function useIntroSection(animCallback: () => void) {
                 'path#logo',
                 { pathLength: 1, opacity: 1 },
                 {
-                    duration: 2.5,
+                    duration: 1.5,
                     delay: 0.5,
                 },
             ],
@@ -21,7 +21,7 @@ export default function useIntroSection(animCallback: () => void) {
                 { height: '100vh' },
                 {
                     duration: 1.5,
-                    delay: 2.5,
+                    delay: 2,
                 },
             ],
             // rotate the logo to face down for scrolling indication

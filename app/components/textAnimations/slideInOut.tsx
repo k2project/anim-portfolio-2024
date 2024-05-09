@@ -7,10 +7,14 @@ export default function SlideInOut({
     text,
     delay = 0,
     showOnAnimEnd = false,
+    durationIn = 1.5,
+    durationOut = 1,
 }: {
     text: string;
     delay?: number;
     showOnAnimEnd?: boolean;
+    durationIn?: number;
+    durationOut?: number;
 }) {
     const [hide, setHide] = useState(false);
 
@@ -19,7 +23,7 @@ export default function SlideInOut({
             x: [150, 0],
             opacity: [0, 1],
             transition: {
-                duration: 2,
+                duration:durationIn,
                 times: [0, 1],
                 delay: 0.5 + 0.03 * custom.index + custom.delay,
                 ease: [0.16, 1, 0.3, 1],
@@ -29,7 +33,7 @@ export default function SlideInOut({
             x: [0, -40],
             opacity: [1, 0],
             transition: {
-                duration: 1.3,
+                duration: durationOut,
                 times: [0, 1],
                 delay: 0.1 + 0.03 * custom.index - custom.delay,
                 ease: [0.7, 0, 0.84, 0],

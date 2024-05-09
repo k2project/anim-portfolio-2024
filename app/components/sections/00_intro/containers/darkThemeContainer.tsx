@@ -26,7 +26,8 @@ export default function DarkThemeContainer() {
                     <p className='whitespace-pre-line tracking-widest text-sm font-semibold text-tertiary'>
                         <SlideInOut
                             text='SCROLL DOWN'
-                            delay={8}
+                            delay={6.5}
+                            durationIn={2}
                             showOnAnimEnd={true}
                         />
                     </p>
