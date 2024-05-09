@@ -7,11 +7,11 @@ export default function Bio() {
     const { headingScale, textY, textOpacity } = useBioAnimation();
 
     return (
-        <div className='md:w-10/12 sm:pb-20 lg:pb-0'>
+        <div className='w-full md:w-10/12 sm:pb-20 lg:pb-0'>
             <m.h2
                 style={{ scale: headingScale }}
                 initial={{ scale: 0 }}
-                className='font-bold uppercase text-5xl xl:text-7xl pb-6 origin-left text-gradient-theme'
+                className='font-bold uppercase text-4xl xl:text-7xl pb-6 origin-left text-gradient-theme'
             >
                 Experience, Skills and more...
             </m.h2>
