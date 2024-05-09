@@ -1,18 +1,18 @@
 'use client';
 
 import { lazy } from 'react';
-import IntroSection from '@components/sections/intro';
+import IntroSection from '@components/sections/00_intro';
 import useSections from './useSections';
 import { m } from 'framer-motion';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import LandscapeWrapper from '@components/landscapeWrapper';
 
 const ProgressBar = lazy(() => import('@components/progressBar'));
-const DeveloperSection = lazy(() => import('./developer'));
-const AboutSection = lazy(() => import('./about'));
-const TechSection = lazy(() => import('./tech'));
-const RecommendationsSection = lazy(() => import('./recommendations'));
-const EndingSection = lazy(() => import('./ending'));
+const DeveloperSection = lazy(() => import('./01_developer'));
+const AboutSection = lazy(() => import('./02_about'));
+const TechSection = lazy(() => import('./03_tech'));
+const RecommendationsSection = lazy(() => import('./04_recommendations'));
+const EndingSection = lazy(() => import('./05_ending'));
 
 export default function Sections() {
     const { showScrollableSections, enableScrolling } = useSections();
