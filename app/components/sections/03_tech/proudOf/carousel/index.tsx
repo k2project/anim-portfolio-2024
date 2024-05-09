@@ -15,6 +15,7 @@ export default function LottieCarousel() {
         >
             <h3 className='sr-only'>Most proud of</h3>
             <m.ul
+                // Estimated width of list based on number of items and their size
                 className='w-[1600px] flex items-center h-80 relative'
                 style={{ x, height: itemBaseSize }}
             >

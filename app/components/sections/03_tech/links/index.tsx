@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-export default function Buttons() {
+export default function Links() {
     return (
-        <div className='md:space-x-6 text-center flex justify-center mt-16'>
+        <div className='md:space-x-6 flex justify-center mt-16'>
             <Link
                 href='https://github.com/k2project'
                 target='_blank'
@@ -10,7 +10,7 @@ export default function Buttons() {
                 className='relative hidden border-none md:inline-block text-xl uppercase rounded-lg font-bold py-4 px-16 overflow-hidden w-60 h-16'
             >
                 <span className='bg-gradient-theme absolute w-full h-full left-0 top-0' />
-                <span className='bg-tertiary absolute w-[236px] h-[60px] left-[2px] top-[2px] rounded-md' />
+                <span className='bg-tertiary absolute w-[calc(100%-4px)] h-[calc(100%-4px)] left-[2px] top-[2px] rounded-md' />
                 <span className='text-gradient-theme relative'>GitHub</span>
             </Link>
 

@@ -6,7 +6,7 @@ import { Sections } from '@types';
 import React from 'react';
 import useTechSectionAnimation from './useTechSectionAnimation';
 import MainTech from './mainTech';
-import Buttons from './links';
+import Links from './links';
 import ProudOf from './proudOf';
 
 export default function TechSection() {
@@ -24,7 +24,7 @@ export default function TechSection() {
                         <MainTech />
                         <ProudOf />
                     </div>
-                    <Buttons />
+                    <Links />
                 </div>
             </div>
         </SectionWrapper>

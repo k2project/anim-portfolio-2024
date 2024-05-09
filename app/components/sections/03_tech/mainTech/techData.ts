@@ -27,4 +27,4 @@ export const techMain: ITechLogo[] = [
 // First we calculate the list width --> 100vh * 0.5 and then we divide that by the number of items in the row
 export const listStyle = 'grid-cols-3 md:grid-cols-4 gap-2';
 export const itemStyle =
-    'w-[calc(100vw*.75/3)] h-[calc(100vw*.75/3)] sm:w-[calc(100vw*.5/3)] sm:h-[calc(100vw*.5/3)] md:w-[calc(100vw*.5/4)] md:h-[calc(100vw*.5/4)] max-h-[calc(1920px*0.45/4)] max-w-[calc(1920px*0.45/4)]';
+    'w-[calc(100vw*.8/3)] h-[calc(100vw*.8/3)] sm:w-[calc(100vw*.6/3)] sm:h-[calc(100vw*.6/3)] md:w-[calc(100vw*.5/4)] md:h-[calc(100vw*.5/4)] max-h-[calc(1920px*0.45/4)] max-w-[calc(1920px*0.45/4)]';
