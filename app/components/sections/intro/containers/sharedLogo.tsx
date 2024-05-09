@@ -12,7 +12,7 @@ export default function SharedLogo({
         <AnimatedLogo
             id='logo'
             color='white'
-            style='w-[calc(100vh*.25)] h-[calc(100vh*.25) min-h-36 min-w-36'
+            style='w-[calc(100vh*.2)] h-[calc(100vh*.2) min-h-40 min-w-40'
             gradient={gradient}
             animated={animated}
         />
