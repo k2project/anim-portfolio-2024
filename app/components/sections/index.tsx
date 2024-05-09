@@ -4,6 +4,8 @@ import { lazy } from 'react';
 import IntroSection from '@components/sections/intro';
 import useSections from './useSections';
 import { m } from 'framer-motion';
+import useWindowDimensions from '@utils/useWindowDimensions';
+import LandscapeWrapper from '@components/landscapeWrapper';
 
 const ProgressBar = lazy(() => import('@components/progressBar'));
 const DeveloperSection = lazy(() => import('./developer'));
@@ -14,6 +16,10 @@ const EndingSection = lazy(() => import('./ending'));
 
 export default function Sections() {
     const { showScrollableSections, enableScrolling } = useSections();
+    const { isInSmallScreenLandscape } = useWindowDimensions();
+
+    if (isInSmallScreenLandscape) return <LandscapeWrapper />;
+
     return (
         <>
             <IntroSection enableScrolling={enableScrolling} />
