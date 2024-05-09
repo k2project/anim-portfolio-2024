@@ -26,7 +26,7 @@ export default function useHeadingAnimation(): IUseHeadingAnimation {
         scrollY,
         [
             endingSectionFromTop + windowHeight,
-            endingSectionFromTop + windowHeight * 1.5,
+            endingSectionFromTop + windowHeight * 2.5,
         ],
         [50, 0]
     );
@@ -34,7 +34,7 @@ export default function useHeadingAnimation(): IUseHeadingAnimation {
         scrollY,
         [
             endingSectionFromTop + windowHeight * 1.25,
-            endingSectionFromTop + windowHeight * 1.5,
+            endingSectionFromTop + windowHeight * 2.5,
         ],
         [0, 1]
     );
@@ -42,7 +42,7 @@ export default function useHeadingAnimation(): IUseHeadingAnimation {
         scrollY,
         [
             endingSectionFromTop + windowHeight * 2,
-            endingSectionFromTop + windowHeight * 2.75,
+            endingSectionFromTop + windowHeight * 3.75,
         ],
         [50, 0]
     );
@@ -50,7 +50,7 @@ export default function useHeadingAnimation(): IUseHeadingAnimation {
         scrollY,
         [
             endingSectionFromTop + windowHeight * 2.25,
-            endingSectionFromTop + windowHeight * 2.5,
+            endingSectionFromTop + windowHeight * 3.5,
         ],
         [0, 1]
     );

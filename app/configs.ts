@@ -57,7 +57,7 @@ const RecommendationsSection: ISection = {
 };
 export const ENDING_SECTION_FROM_TOP =
     RECOMMENDATIONS_SECTION_FROM_TOP + RECOMMENDATIONS_SECTION_H;
-export const ENDING_SECTION_H = 4;
+export const ENDING_SECTION_H = 5;
 const EndingSection: ISection = {
     id: Sections.Ending,
     height: ENDING_SECTION_H,
