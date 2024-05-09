@@ -3,14 +3,14 @@ export interface ISection {
     scrollFromTop: number; //position from top as per number of window's height to for animation compatibility across different devicesscroll
     zIndex: string; //TW custom class
     bg?: string; //TW class
+    id: string;
 }
 
 export enum Sections {
     Intro = 'intro',
     Developer = 'developer',
     About = 'about',
-    Tech = 'tech stuck',
+    Tech = 'tech_and_skills',
     Recommendations = 'recommendations',
-    Skills = 'skills',
     Ending = 'ending',
 }

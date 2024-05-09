@@ -19,12 +19,14 @@ export default function SectionWrapper({
     initialY,
     y,
     withMaxDesktopContainer = true,
+    id,
 }: ISectionWrapperProps) {
     const { windowHeight } = useWindowDimensions();
     return (
         <section
             className='relative'
             style={{ minHeight: height * windowHeight }}
+            id={id}
         >
             <m.div
                 className={`fixed w-screen h-screen top-0 left-0 overflow-hidden flex justify-center ${bg} ${zIndex}`}
