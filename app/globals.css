@@ -73,4 +73,8 @@ body:-webkit-scrollbar {
         @apply bg-left-bottom bg-fixed bg-repeat-x bg-gradient-to-r from-contrast via-yellow-500 to-contrast text-transparent bg-clip-text;
         animation: animatedBackground 5s linear infinite reverse;
     }
+    .h-a {
+        height: 100vh;
+        max-height: -webkit-fill-available;
+    }
 }
