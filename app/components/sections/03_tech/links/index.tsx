@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Links() {
     return (
-        <div className='md:space-x-6 flex justify-center mt-16'>
+        <div className='md:space-x-6 flex justify-center mt-16 text-center px-8 lg:px-0'>
             <Link
                 href='https://github.com/k2project'
                 target='_blank'

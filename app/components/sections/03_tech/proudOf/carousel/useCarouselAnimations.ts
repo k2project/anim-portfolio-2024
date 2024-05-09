@@ -12,7 +12,7 @@ export default function useCarouselAnimation(index: number) {
 
     // Size of centered item
     const listLength = animList.length;
-    const screenSize = Math.min(windowWidth, windowHeight) * 0.45;
+    const screenSize = Math.min(windowWidth, windowHeight) * 0.4;
     const itemMinSize = 320; //w/h-80
     const itemBaseSize = Math.max(itemMinSize, screenSize);
     // All items sizes

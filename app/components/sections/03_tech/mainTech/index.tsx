@@ -9,8 +9,8 @@ export default function MainTech() {
     const { y } = useMainTechAnimation();
 
     return (
-        <div className='w-full bg-red-500'>
-            <m.div className='inline-block m-auto' style={{ y }}>
+        <div className='w-full absolute bottom-0 left-0 block'>
+            <m.div className='relative inline-block m-auto' style={{ y }}>
                 <h3 className='sr-only'>Main tech stack</h3>
                 <ul
                     aria-labelledby=''

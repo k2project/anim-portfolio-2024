@@ -18,14 +18,13 @@ export default function TechSection() {
             initialY={initialY}
             y={sectionY}
         >
-            <div className='flex w-full h-full justify-center items-center'>
-                <div className='text-center'>
-                    <div className='relative'>
-                        <MainTech />
-                        <ProudOf />
-                    </div>
-                    <Links />
+            <div className='grid gird-rows-[repeat(5,1fr)] w-full h-full'>
+                <div />
+                <div className='relative row-span-3 text-center'>
+                    <MainTech />
+                    <ProudOf />
                 </div>
+                <Links />
             </div>
         </SectionWrapper>
     );
