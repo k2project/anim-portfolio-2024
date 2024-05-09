@@ -18,9 +18,8 @@ export default function TechSection() {
             initialY={initialY}
             y={sectionY}
         >
-            <div className='grid gird-rows-[repeat(5,1fr)] w-full h-full'>
-                <div />
-                <div className='relative row-span-3 text-center'>
+            <div className='grid sm:gird-rows-[repeat(5,1fr)_auto] sm:gird-rows-[repeat(8,1fr)] w-full h-full'>
+                <div className='relative row-span-4 sm:row-span-7 text-center'>
                     <MainTech />
                     <ProudOf />
                 </div>
