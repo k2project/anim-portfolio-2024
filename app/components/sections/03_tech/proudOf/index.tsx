@@ -10,7 +10,7 @@ export default function ProudOf() {
     // Positioned absolutely to occupy the space of tech stack when it is animated out
     return (
         <m.div
-            className='w-full absolute bottom-0 left-0 block transform-gpu origin-top'
+            className='w-full absolute bottom-0 left-0 block transform-gpu origin-center'
             initial={{ scale: 0 }}
             style={{ scale }}
         >

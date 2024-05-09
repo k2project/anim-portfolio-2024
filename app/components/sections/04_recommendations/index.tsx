@@ -20,7 +20,7 @@ export default function RecommendationsSection() {
             initialY={initialY}
             y={sectionY}
         >
-            <div className='flex px-[5vw]'>
+            <div className='flex px-2'>
                 <AnimatedColumnContainer data={recommendationsColLeft} />
                 <AnimatedColumnContainer
                     data={recommendationsColMiddle}

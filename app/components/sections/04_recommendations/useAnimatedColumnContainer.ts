@@ -3,6 +3,7 @@
 import {
     RECOMMENDATIONS_SECTION_FROM_TOP,
     RECOMMENDATIONS_SECTION_H,
+    SM_MQ_BREAKPOINT,
 } from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { useScroll, useTransform } from 'framer-motion';
@@ -22,7 +23,11 @@ export function useAnimatedColumnContainer(reversedAnim: boolean) {
         setColH(colH);
     }, [windowHeight, windowWidth]);
 
-    const initialY = reversedAnim ? -colH - windowHeight / 2 : windowHeight;
+    const initialYResponsive =
+        windowWidth < SM_MQ_BREAKPOINT ? windowHeight / 3 : windowHeight;
+    const initialY = reversedAnim
+        ? -colH - windowHeight / 2
+        : initialYResponsive;
     const finalY = reversedAnim ? windowHeight : -colH;
     const y = useTransform(
         scrollY,

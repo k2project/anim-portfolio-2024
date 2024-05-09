@@ -3,7 +3,7 @@
  *  and the smallest dimension - unless they surpass the desktop max width set for the content wrapper - used for responsive sizing of elements
  */
 
-import { SMALL_SCREEN_BREAKING_POINT } from '@configs';
+import { LG_MQ_BREAKPOINT } from '@configs';
 import { useEffect, useState } from 'react';
 
 type WindowDimensions = {
@@ -31,7 +31,7 @@ const useWindowDimensions = (): IUseWindowDimensions => {
             });
             if (
                 window.matchMedia('(orientation: landscape)').matches &&
-                window.innerWidth < SMALL_SCREEN_BREAKING_POINT
+                window.innerWidth < LG_MQ_BREAKPOINT
             ) {
                 setIsInSmallScreenLandscape(true);
             } else {

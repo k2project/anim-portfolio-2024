@@ -3,7 +3,7 @@
 import {
     ABOUT_SECTION_FROM_TOP,
     ABOUT_SECTION_H,
-    SMALL_SCREEN_BREAKING_POINT,
+    LG_MQ_BREAKPOINT,
 } from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
@@ -17,7 +17,7 @@ export default function useSummaryAnimation(): IUseSummaryAnimation {
     const { windowWidth, windowHeight } = useWindowDimensions();
     const aboutSectionH = ABOUT_SECTION_H * windowHeight;
     const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
-    const isSmallerScreen = windowWidth < SMALL_SCREEN_BREAKING_POINT;
+    const isSmallerScreen = windowWidth < LG_MQ_BREAKPOINT;
 
     // Animates the section out of the screen in top direction
     //On smaller screen the out animation is delayed as there is no work history shown

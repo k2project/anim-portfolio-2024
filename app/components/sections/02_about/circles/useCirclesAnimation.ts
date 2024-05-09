@@ -4,7 +4,7 @@ import {
     ABOUT_SECTION_FROM_TOP,
     ABOUT_SECTION_H,
     MAX_DESKTOP,
-    SMALL_SCREEN_BREAKING_POINT,
+    LG_MQ_BREAKPOINT,
 } from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
@@ -20,7 +20,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const aboutSectionH = ABOUT_SECTION_H * windowHeight;
     const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
 
-    const isSmallerScreen = windowWidth < SMALL_SCREEN_BREAKING_POINT;
+    const isSmallerScreen = windowWidth < LG_MQ_BREAKPOINT;
 
     const circleSize = Math.min(windowWidth, windowHeight);
     // On larger screens the width is restricted to the MAX_DESKTOP

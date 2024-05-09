@@ -1,8 +1,9 @@
 import { ISection, Sections } from '@types';
 
 export const MAX_DESKTOP = 1920; //max size of the content wrapper on larger desktops
-export const SMALL_SCREEN_BREAKING_POINT = 1024; //TW lg:
-export const MOBILE_SCREEN_BREAKING_POINT = 768; //TW md:
+export const LG_MQ_BREAKPOINT = 1024; //TW lg:
+export const MD_MQ_BREAKPOINT = 768; //TW md:
+export const SM_MQ_BREAKPOINT = 640; //TW sm:
 
 // Used for svg
 export const COLOR_PRIMARY = '#312f38';
@@ -35,7 +36,7 @@ const AboutSection: ISection = {
 };
 
 export const TECH_SECTION_FROM_TOP = ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H;
-export const TECH_SECTION_H = 50;
+export const TECH_SECTION_H = 55;
 const TechSection: ISection = {
     id: Sections.Tech,
     height: TECH_SECTION_H,
