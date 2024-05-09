@@ -12,7 +12,7 @@ export default function DarkThemeContainer() {
             id='bg-dark'
             className='absolute bottom-0 left-0 w-full h-0 bg-primary overflow-hidden'
         >
-            <div className='absolute bottom-0 w-full h-a flex justify-center items-center pb-28'>
+            <div className='absolute bottom-0 w-full h-screen flex justify-center items-center pb-28'>
                 <m.div style={{ opacity, scale }}>
                     {/* Animated with sequence in useIntroSection */}
                     <m.div id='logo-dark-container' className='relative'>
