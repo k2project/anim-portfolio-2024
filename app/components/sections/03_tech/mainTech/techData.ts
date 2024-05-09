@@ -1,17 +1,17 @@
 import { ITechLogo } from './type';
 
 export const techMain: ITechLogo[] = [
-    { src: '/anim-portfolio-2024/assets/html.png', alt: 'HTML 5' },
-    { src: '/anim-portfolio-2024/assets/css.png', alt: 'CSS 3' },
+    { src: '/anim-portfolio-2024/assets/html.png', alt: 'HTML5' },
+    { src: '/anim-portfolio-2024/assets/css.png', alt: 'CSS3' },
     { src: '/anim-portfolio-2024/assets/tailwind.webp', alt: 'Tailwind CSS' },
     { src: '/anim-portfolio-2024/assets/storybook.png', alt: 'Storybook' },
     { src: '/anim-portfolio-2024/assets/js.png', alt: 'JavaScript' },
     { src: '/anim-portfolio-2024/assets/ts.svg', alt: 'Typescript' },
     {
         src: '/anim-portfolio-2024/assets/react.svg',
-        alt: 'Recta JS + React Native',
+        alt: 'ReactJS + React Native',
     },
-    { src: '/anim-portfolio-2024/assets/next.png', alt: 'Next JS' },
+    { src: '/anim-portfolio-2024/assets/next.png', alt: 'NextJS' },
     { src: '/anim-portfolio-2024/assets/redux.png', alt: 'Redux + Jotai' },
     { src: '/anim-portfolio-2024/assets/jest.png', alt: 'Jest' },
     {
