@@ -35,18 +35,18 @@ const AboutSection: ISection = {
     zIndex: 'z-[2]', //sections indices are custom classes from 0 to sections.length -1
 };
 
-export const TECH_SECTION_FROM_TOP = ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H;
-export const TECH_SECTION_H = 55;
-const TechSection: ISection = {
-    id: Sections.Tech,
-    height: TECH_SECTION_H,
-    scrollFromTop: TECH_SECTION_FROM_TOP,
-    zIndex: 'z-[3]', //sections indices are custom classes from 0 to sections.length -1
-    bg: 'bg-tertiary',
-};
+// export const TECH_SECTION_FROM_TOP = ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H;
+// export const TECH_SECTION_H = 55;
+// const TechSection: ISection = {
+//     id: Sections.Tech,
+//     height: TECH_SECTION_H,
+//     scrollFromTop: TECH_SECTION_FROM_TOP,
+//     zIndex: 'z-[3]', //sections indices are custom classes from 0 to sections.length -1
+//     bg: 'bg-tertiary',
+// };
 
 export const RECOMMENDATIONS_SECTION_FROM_TOP =
-    TECH_SECTION_FROM_TOP + TECH_SECTION_H;
+    ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H;
 export const RECOMMENDATIONS_SECTION_H = 18;
 const RecommendationsSection: ISection = {
     id: Sections.Recommendations,
@@ -69,7 +69,7 @@ export const SectionsData: { [key: string]: ISection } = {
     [Sections.Intro]: IntroSection,
     [Sections.Developer]: DeveloperSection,
     [Sections.About]: AboutSection,
-    [Sections.Tech]: TechSection,
+    // [Sections.Tech]: TechSection,
     [Sections.Recommendations]: RecommendationsSection,
     [Sections.Ending]: EndingSection,
 };

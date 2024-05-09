@@ -13,6 +13,7 @@ type WindowDimensions = {
 
 interface IUseWindowDimensions extends WindowDimensions {
     isInSmallScreenLandscape: boolean;
+    isSmallDevice: boolean;
 }
 
 const useWindowDimensions = (): IUseWindowDimensions => {
@@ -22,6 +23,7 @@ const useWindowDimensions = (): IUseWindowDimensions => {
     });
     const [isInSmallScreenLandscape, setIsInSmallScreenLandscape] =
         useState(false);
+    const [isSmallDevice, setIsSmallDevice] = useState(false);
 
     useEffect(() => {
         function handleResize(): void {
@@ -37,13 +39,18 @@ const useWindowDimensions = (): IUseWindowDimensions => {
             } else {
                 setIsInSmallScreenLandscape(false);
             }
+            if (window.innerWidth < LG_MQ_BREAKPOINT) {
+                setIsSmallDevice(true);
+            } else {
+                setIsSmallDevice(false);
+            }
         }
         handleResize();
         window.addEventListener('resize', handleResize);
         return (): void => window.removeEventListener('resize', handleResize);
     }, []);
 
-    return { ...windowDimensions, isInSmallScreenLandscape };
+    return { ...windowDimensions, isInSmallScreenLandscape, isSmallDevice };
 };
 
 export default useWindowDimensions;

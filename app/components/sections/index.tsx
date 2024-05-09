@@ -34,7 +34,7 @@ export default function Sections() {
                     <ProgressBar />
                     <DeveloperSection />
                     <AboutSection />
-                    <TechSection />
+                    {/* <TechSection /> */}
                     <RecommendationsSection />
                     <EndingSection />
                 </m.div>

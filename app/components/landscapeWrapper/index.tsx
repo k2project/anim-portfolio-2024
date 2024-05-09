@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function LandscapeWrapper() {
     return (
-        <div className='flex justify-center items-center w-full h-screen bg-primary text-center text-tertiary'>
+        <div className='flex justify-center items-center w-full h-[calc(100vh + 60px)] bg-primary text-center text-tertiary'>
             <div className='pt-12'>
                 <Image
                     src='/anim-portfolio-2024/assets/landscape.png'
