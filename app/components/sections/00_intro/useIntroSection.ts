@@ -24,13 +24,14 @@ export default function useIntroSection(animCallback: () => void) {
                     delay: 2.5,
                 },
             ],
+            // rotate the logo to face down for scrolling indication
             [
                 'div#logo-dark-container',
                 {
                     transform: `rotate(-450deg)`,
                 },
                 {
-                    duration: 0.5,
+                    duration: 0.75,
                 },
             ],
         ],

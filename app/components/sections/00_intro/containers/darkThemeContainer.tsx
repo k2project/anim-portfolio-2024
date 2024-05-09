@@ -14,6 +14,7 @@ export default function DarkThemeContainer() {
         >
             <div className='absolute bottom-0 w-full h-dvh flex justify-center items-center pb-28'>
                 <m.div style={{ opacity, scale }}>
+                    {/* Animated with sequence in useIntroSection */}
                     <m.div id='logo-dark-container' className='relative'>
                         <SharedLogo gradient={false} animated={false} />
                     </m.div>
@@ -25,7 +26,7 @@ export default function DarkThemeContainer() {
                     <p className='whitespace-pre-line tracking-widest text-sm font-semibold text-tertiary'>
                         <SlideInOut
                             text='SCROLL DOWN'
-                            delay={7}
+                            delay={8}
                             showOnAnimEnd={true}
                         />
                     </p>

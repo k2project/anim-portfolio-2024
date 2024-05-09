@@ -17,7 +17,7 @@ const IntroSection: ISection = {
     zIndex: 'z-[0]', //sections indices are custom classes from 0 to sections.length -1
 };
 
-export const DEVELOPER_SECTION_H = 5;
+export const DEVELOPER_SECTION_H = 6;
 const DeveloperSection: ISection = {
     id: Sections.Developer,
     height: DEVELOPER_SECTION_H,

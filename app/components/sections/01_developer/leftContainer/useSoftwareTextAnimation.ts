@@ -20,7 +20,7 @@ export default function useSoftwareTextAnimation(): IUseSoftwareTextAnimation {
     const softwareH = softwareW * SOFTWARE_RATIO;
     const softwareTop = useTransform(
         scrollY,
-        [0, developerSectionH - windowHeight],
+        [windowHeight, developerSectionH - windowHeight],
         [windowHeight, -softwareH]
     );
 

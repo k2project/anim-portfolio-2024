@@ -1,5 +1,6 @@
 'use client';
 
+import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
 
 interface IUseDarkThemeContainer {
@@ -9,8 +10,10 @@ interface IUseDarkThemeContainer {
 
 export default function useDarkThemeContainer(): IUseDarkThemeContainer {
     const { scrollY } = useScroll();
-    const opacity = useTransform(scrollY, [0, 50, 300], [1, 1, 0]);
-    const scale = useTransform(scrollY, [0, 50, 300], [1, 1, 0]);
+    const { windowHeight } = useWindowDimensions();
+
+    const opacity = useTransform(scrollY, [0, 100, windowHeight], [1, 1, 0]);
+    const scale = useTransform(scrollY, [0, 100, windowHeight], [1, 1, 0]);
 
     return { opacity, scale };
 }
