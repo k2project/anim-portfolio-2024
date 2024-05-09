@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export default function LandscapeWrapper() {
     return (
-        <div className='flex justify-center items-center w-full h-lvh bg-primary text-center text-tertiary'>
-            <div>
+        <div className='flex justify-center items-center w-full h-fit bg-primary text-center text-tertiary'>
+            <div className='pt-12'>
                 <Image
                     src='/anim-portfolio-2024/assets/landscape.png'
                     alt=''
@@ -12,13 +12,10 @@ export default function LandscapeWrapper() {
                     height={80}
                     priority
                 />
-                <p className='p-6'>
+                <p className='px-6 py-4'>
                     Please rotate the device into the portrait mode.
                 </p>
-            </div>
-
-            <div className='absolute w-full bottom-10 left-0'>
-                <h1 className='font-bold uppercase text-sm pb-1'>
+                <h1 className='font-bold uppercase text-sm pb-1 pt-6'>
                     Krzysztof Kopczynski
                 </h1>
                 <h2 className='text-xs'>Software developer &copy; 2024</h2>
