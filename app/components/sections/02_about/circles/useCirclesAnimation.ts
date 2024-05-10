@@ -22,7 +22,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
 
     const isSmallerScreen = windowWidth < LG_MQ_BREAKPOINT;
 
-    const circleSize = Math.min(windowWidth, windowHeight);
+    const circleSize = isSmallerScreen ? windowWidth : windowWidth * 0.7;
     // On larger screens the width is restricted to the MAX_DESKTOP
     const containerWidth = Math.min(windowWidth, MAX_DESKTOP);
     const circleCenteredHorizontally = (containerWidth - circleSize) / 2;
@@ -36,9 +36,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
         : circleCenteredHorizontally -
           Math.min(circleSize, containerWidth) / 2 -
           rightPadding; // on larger screens positioned on the left half of the screen/container
-    const yDefaultOutput = isSmallerScreen
-        ? circleCenteredVertically + windowHeight / 2 // on smaller screens positioned on the bottom half of the screen
-        : circleCenteredVertically + topOffset; // on the larger screens centered vertically with some offset on top
+    const yDefaultOutput = circleCenteredVertically + windowHeight / 2;
 
     const inputRange = [
         aboutSectionFromTop - windowHeight * 2,

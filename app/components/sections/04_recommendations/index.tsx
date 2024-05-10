@@ -19,6 +19,7 @@ export default function RecommendationsSection() {
             {...SectionsData[Sections.Recommendations]}
             initialY={initialY}
             y={sectionY}
+            style='overflow-hidden'
         >
             <div className='flex px-2'>
                 <AnimatedColumnContainer data={recommendationsColLeft} />

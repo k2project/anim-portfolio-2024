@@ -42,7 +42,6 @@ const TechSection: ISection = {
     height: TECH_SECTION_H,
     scrollFromTop: TECH_SECTION_FROM_TOP,
     zIndex: 'z-[3]', //sections indices are custom classes from 0 to sections.length -1
-    bg: 'bg-tertiary',
 };
 
 export const RECOMMENDATIONS_SECTION_FROM_TOP =
@@ -53,7 +52,6 @@ const RecommendationsSection: ISection = {
     height: RECOMMENDATIONS_SECTION_H,
     scrollFromTop: RECOMMENDATIONS_SECTION_FROM_TOP,
     zIndex: 'z-[4]', //sections indices are custom classes from 0 to sections.length -1
-    bg: 'bg-primary',
 };
 export const ENDING_SECTION_FROM_TOP =
     RECOMMENDATIONS_SECTION_FROM_TOP + RECOMMENDATIONS_SECTION_H;
@@ -69,7 +67,7 @@ export const SectionsData: { [key: string]: ISection } = {
     [Sections.Intro]: IntroSection,
     [Sections.Developer]: DeveloperSection,
     [Sections.About]: AboutSection,
-    // [Sections.Tech]: TechSection,
+    [Sections.Tech]: TechSection,
     [Sections.Recommendations]: RecommendationsSection,
     [Sections.Ending]: EndingSection,
 };
