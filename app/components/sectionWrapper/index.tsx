@@ -29,7 +29,7 @@ export default function SectionWrapper({
             id={id}
         >
             <m.div
-                className={`fixed w-screen h-svh bottom-0 left-0 overflow-hidden flex justify-center ${zIndex}`}
+                className={`fixed w-screen h-screen top-0 left-0 overflow-hidden flex justify-center ${zIndex}`}
                 style={{ y }}
                 initial={{ y: initialY }}
             >
