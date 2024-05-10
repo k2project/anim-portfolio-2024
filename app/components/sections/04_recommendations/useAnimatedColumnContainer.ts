@@ -16,6 +16,7 @@ export function useAnimatedColumnContainer(reversedAnim: boolean) {
     const [colH, setColH] = useState(windowHeight);
     const scrollFromTop = RECOMMENDATIONS_SECTION_FROM_TOP * windowHeight;
     const recommendationsHeight = RECOMMENDATIONS_SECTION_H * windowHeight;
+    const smallDevice = windowWidth < SM_MQ_BREAKPOINT;
 
     useEffect(() => {
         if (!colRef.current) return;
@@ -23,18 +24,16 @@ export function useAnimatedColumnContainer(reversedAnim: boolean) {
         setColH(colH);
     }, [windowHeight, windowWidth]);
 
-    const initialYResponsive =
-        windowWidth < SM_MQ_BREAKPOINT
-            ? windowHeight * 1.2
-            : windowHeight * 1.3;
+    // On small devices we keep the animation matching the scroll speed and on the bigger one we scroll the recommendations in before the tech is out of screen
+    const initialYResponsive = smallDevice ? 0 : windowHeight * 1.25;
     const initialY = reversedAnim
-        ? -colH - windowHeight / 2
+        ? -colH - windowHeight * 0.3
         : initialYResponsive;
     const finalY = reversedAnim ? windowHeight : -colH;
     const y = useTransform(
         scrollY,
         [
-            scrollFromTop - windowHeight,
+            smallDevice ? scrollFromTop : scrollFromTop - windowHeight * 2,
             scrollFromTop + recommendationsHeight - windowHeight,
         ],
         [initialY, finalY]

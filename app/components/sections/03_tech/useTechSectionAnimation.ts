@@ -20,8 +20,8 @@ export default function useTechSectionAnimation(): IUseTechSectionAnimation {
         [
             techSectionFromTop - windowHeight,
             techSectionFromTop,
+            techSectionFromTop + techSectionH - windowHeight,
             techSectionFromTop + techSectionH,
-            techSectionFromTop + techSectionH + windowHeight,
         ],
         [windowHeight, 0, 0, -windowHeight]
     );

@@ -53,8 +53,8 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     // Circles stick out of the top of the screen for the duration of next (Tech) section scrolling
     const yInputRange = [
         ...xInputRange,
+        aboutSectionFromTop + aboutSectionH + techSectionH - windowHeight,
         aboutSectionFromTop + aboutSectionH + techSectionH,
-        aboutSectionFromTop + aboutSectionH + techSectionH + windowHeight,
     ];
 
     // Moves the circles about on the screen in x and y axis - animation
