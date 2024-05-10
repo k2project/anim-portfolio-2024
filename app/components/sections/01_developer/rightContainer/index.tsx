@@ -5,7 +5,7 @@ import DeveloperText from './developerText';
 import useDeveloperTextAnimation from './useDeveloperTextAnimation';
 
 export default function RightContainer() {
-    const { developerTop, developerW, developerH, developerLightH } =
+    const { developerTop, developerW, developerH, developerAbsH } =
         useDeveloperTextAnimation();
 
     return (
@@ -16,12 +16,12 @@ export default function RightContainer() {
         >
             <m.div
                 className='absolute overflow-hidden rounded-b-full'
-                style={{ height: developerLightH }}
+                style={{ height: developerAbsH }}
             >
-                <DeveloperText size={developerW} />
+                <DeveloperText size={developerW} gradient />
             </m.div>
 
-            <DeveloperText size={developerW} gradient />
+            <DeveloperText size={developerW} />
         </m.div>
     );
 }

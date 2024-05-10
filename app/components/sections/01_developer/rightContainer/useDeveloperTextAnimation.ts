@@ -9,7 +9,7 @@ interface IUseDeveloperTextAnimation {
     developerTop: MotionValue<number>;
     developerW: number;
     developerH: number;
-    developerLightH: MotionValue<number>;
+    developerAbsH: MotionValue<number>;
 }
 
 export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation {
@@ -24,9 +24,9 @@ export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation 
         [windowHeight, developerSectionH - windowHeight],
         [-developerH, windowHeight]
     );
-    const developerLightH = useTransform(
+    const developerAbsH = useTransform(
         scrollY,
-        [developerSectionH / 2, developerSectionH + windowHeight],
+        [developerSectionH / 3, developerSectionH - windowHeight],
         [0, developerSectionH]
     );
 
@@ -34,6 +34,6 @@ export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation 
         developerTop,
         developerW,
         developerH,
-        developerLightH,
+        developerAbsH,
     };
 }
