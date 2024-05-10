@@ -25,7 +25,9 @@ export function useAnimatedColumnContainer(reversedAnim: boolean) {
     }, [windowHeight, windowWidth]);
 
     // On small devices we keep the animation matching the scroll speed and on the bigger one we scroll the recommendations in before the tech is out of screen
-    const initialYResponsive = smallDevice ? 0 : windowHeight * 1.25;
+    const initialYResponsive = smallDevice
+        ? windowHeight * 0.2
+        : windowHeight * 1.25;
     const initialY = reversedAnim
         ? -colH - windowHeight * 0.3
         : initialYResponsive;

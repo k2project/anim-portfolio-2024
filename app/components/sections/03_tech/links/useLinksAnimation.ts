@@ -16,8 +16,8 @@ export default function useLinksAnimation(): IUseLinksAnimation {
     const scale = useTransform(
         scrollY,
         [
-            techSectionFromTop + techSectionHeight - windowHeight * 4,
-            techSectionFromTop + techSectionHeight - windowHeight * 3,
+            techSectionFromTop + techSectionHeight - windowHeight * 2.5,
+            techSectionFromTop + techSectionHeight - windowHeight * 2,
             techSectionFromTop + techSectionHeight - windowHeight,
             techSectionFromTop + techSectionHeight,
         ],

@@ -30,8 +30,9 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const circleCenteredHorizontally = (containerWidth - circleSize) / 2;
     const circleCenteredVertically = (windowHeight - circleSize) / 2;
     const circleAtTheBottomOfFixedContainer = windowHeight - circleSize;
+    const windowPickSize = windowHeight * (isSmallerScreen ? 0.6 : 0.4);
     const circlePoppingOutOfFixedContainer =
-        circleAtTheBottomOfFixedContainer + windowHeight * 0.4;
+        circleAtTheBottomOfFixedContainer + windowPickSize;
     const rightPadding = 80; // Ensures extra room for the right side content when the circles are placed on the left
 
     // Default: centered positioning
@@ -53,6 +54,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     // Circles stick out of the top of the screen for the duration of next (Tech) section scrolling
     const yInputRange = [
         ...xInputRange,
+        aboutSectionFromTop + aboutSectionH + windowHeight,
         aboutSectionFromTop + aboutSectionH + techSectionH - windowHeight,
         aboutSectionFromTop + aboutSectionH + techSectionH,
     ];
@@ -69,6 +71,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
         -circleSize / 2,
         yDefaultOutput,
         yDefaultOutput,
+        circlePoppingOutOfFixedContainer - windowPickSize,
         circlePoppingOutOfFixedContainer,
         circlePoppingOutOfFixedContainer,
         circleAtTheBottomOfFixedContainer - windowHeight * 2,
