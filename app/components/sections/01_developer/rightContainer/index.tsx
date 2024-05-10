@@ -5,14 +5,19 @@ import DeveloperText from './developerText';
 import useDeveloperTextAnimation from './useDeveloperTextAnimation';
 
 export default function RightContainer() {
-    const { developerTop, developerW, developerH, developerAbsH } =
-        useDeveloperTextAnimation();
+    const {
+        developerTop,
+        developerW,
+        developerH,
+        developerAbsH,
+        developerTopInit,
+    } = useDeveloperTextAnimation();
 
     return (
         <m.div
             className='relative'
             style={{ top: developerTop }}
-            initial={{ top: -developerH }}
+            initial={{ top: developerTopInit }}
         >
             <m.div
                 className='absolute overflow-hidden rounded-b-full'

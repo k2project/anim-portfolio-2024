@@ -21,7 +21,7 @@ export default function useSoftwareTextAnimation(): IUseSoftwareTextAnimation {
     const softwareTop = useTransform(
         scrollY,
         [windowHeight, developerSectionH - windowHeight],
-        [windowHeight, -softwareH]
+        [windowHeight * 2, -softwareH - windowHeight]
     );
 
     return {

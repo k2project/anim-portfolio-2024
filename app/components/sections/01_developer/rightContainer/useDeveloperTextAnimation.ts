@@ -10,6 +10,7 @@ interface IUseDeveloperTextAnimation {
     developerW: number;
     developerH: number;
     developerAbsH: MotionValue<number>;
+    developerTopInit: number;
 }
 
 export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation {
@@ -19,10 +20,11 @@ export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation 
 
     const developerW = Math.min(windowWidth, MAX_DESKTOP) * 0.5;
     const developerH = developerW * DEVELOPER_RATIO;
+    const developerTopInit = -developerH - windowHeight;
     const developerTop = useTransform(
         scrollY,
         [windowHeight, developerSectionH - windowHeight],
-        [-developerH, windowHeight]
+        [developerTopInit, windowHeight * 2]
     );
     const developerAbsH = useTransform(
         scrollY,
@@ -35,5 +37,6 @@ export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation 
         developerW,
         developerH,
         developerAbsH,
+        developerTopInit,
     };
 }

@@ -32,26 +32,31 @@ const useWindowDimensions = (): IUseWindowDimensions => {
                 windowHeight: window.innerHeight,
             });
         }
+
         function handleResize(): void {
+            // This prevent resizing on mobiles when the address bar hides/shows on scrolling and jumping of the content which animation is based on window height
             if (window.innerWidth > LG_MQ_BREAKPOINT) {
                 setSizes();
-            }
-            if (
-                window.matchMedia('(orientation: landscape)').matches &&
-                window.innerWidth < LG_MQ_BREAKPOINT
-            ) {
-                setIsInSmallScreenLandscape(true);
             } else {
-                setIsInSmallScreenLandscape(false);
+                // Shows placeholder for small screens in landscape mode - auto reloads the app
+                if (window.matchMedia('(orientation: landscape)').matches) {
+                    setIsInSmallScreenLandscape(true);
+                } else {
+                    setIsInSmallScreenLandscape(false);
+                    // Reload the app on small screens when the size changes to ensure that new measurements are computed when resize is disabled
+                    window.location.reload();
+                }
             }
+
             if (window.innerWidth < LG_MQ_BREAKPOINT) {
                 setIsSmallDevice(true);
             } else {
                 setIsSmallDevice(false);
             }
         }
-        // On load set the screen sizes
+        // Set the screen sizes on load
         setSizes();
+        // Handle resize event
         window.addEventListener('resize', handleResize);
         return (): void => window.removeEventListener('resize', handleResize);
     }, []);
