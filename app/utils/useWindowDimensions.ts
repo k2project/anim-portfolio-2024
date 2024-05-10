@@ -43,8 +43,6 @@ const useWindowDimensions = (): IUseWindowDimensions => {
                     setIsInSmallScreenLandscape(true);
                 } else {
                     setIsInSmallScreenLandscape(false);
-                    // Reload the app on small screens when the size changes to ensure that new measurements are computed when resize is disabled
-                    window.location.reload();
                 }
             }
 
