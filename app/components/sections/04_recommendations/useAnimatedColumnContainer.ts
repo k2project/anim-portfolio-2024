@@ -24,7 +24,9 @@ export function useAnimatedColumnContainer(reversedAnim: boolean) {
     }, [windowHeight, windowWidth]);
 
     const initialYResponsive =
-        windowWidth < SM_MQ_BREAKPOINT ? windowHeight / 3 : windowHeight;
+        windowWidth < SM_MQ_BREAKPOINT
+            ? windowHeight * 1.2
+            : windowHeight * 1.3;
     const initialY = reversedAnim
         ? -colH - windowHeight / 2
         : initialYResponsive;

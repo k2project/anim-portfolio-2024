@@ -36,7 +36,7 @@ const AboutSection: ISection = {
 };
 
 export const TECH_SECTION_FROM_TOP = ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H;
-export const TECH_SECTION_H = 55;
+export const TECH_SECTION_H = 5;
 const TechSection: ISection = {
     id: Sections.Tech,
     height: TECH_SECTION_H,
@@ -45,7 +45,7 @@ const TechSection: ISection = {
 };
 
 export const RECOMMENDATIONS_SECTION_FROM_TOP =
-    ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H;
+    TECH_SECTION_FROM_TOP + TECH_SECTION_H;
 export const RECOMMENDATIONS_SECTION_H = 18;
 const RecommendationsSection: ISection = {
     id: Sections.Recommendations,

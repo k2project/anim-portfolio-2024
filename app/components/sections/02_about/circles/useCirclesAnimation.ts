@@ -5,6 +5,7 @@ import {
     ABOUT_SECTION_H,
     MAX_DESKTOP,
     LG_MQ_BREAKPOINT,
+    TECH_SECTION_H,
 } from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
@@ -18,6 +19,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const { scrollY } = useScroll();
     const { windowHeight, windowWidth } = useWindowDimensions();
     const aboutSectionH = ABOUT_SECTION_H * windowHeight;
+    const techSectionH = TECH_SECTION_H * windowHeight;
     const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
 
     const isSmallerScreen = windowWidth < LG_MQ_BREAKPOINT;
@@ -27,8 +29,10 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const containerWidth = Math.min(windowWidth, MAX_DESKTOP);
     const circleCenteredHorizontally = (containerWidth - circleSize) / 2;
     const circleCenteredVertically = (windowHeight - circleSize) / 2;
+    const circleAtTheBottomOfFixedContainer = windowHeight - circleSize;
+    const circlePoppingOutOfFixedContainer =
+        circleAtTheBottomOfFixedContainer + windowHeight * 0.4;
     const rightPadding = 80; // Ensures extra room for the right side content when the circles are placed on the left
-    const topOffset = windowHeight * 0.2;
 
     // Default: centered positioning
     const xDefaultOutput = isSmallerScreen
@@ -38,7 +42,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
           rightPadding; // on larger screens positioned on the left half of the screen/container
     const yDefaultOutput = circleCenteredVertically + windowHeight / 2;
 
-    const inputRange = [
+    const xInputRange = [
         aboutSectionFromTop - windowHeight * 2,
         aboutSectionFromTop,
         aboutSectionFromTop + windowHeight * 7,
@@ -46,20 +50,28 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
             aboutSectionH -
             windowHeight * (isSmallerScreen ? 1 : 2),
     ];
+    // Circles stick out of the top of the screen for the duration of next (Tech) section scrolling
+    const yInputRange = [
+        ...xInputRange,
+        aboutSectionFromTop + aboutSectionH + techSectionH,
+        aboutSectionFromTop + aboutSectionH + techSectionH + windowHeight,
+    ];
 
     // Moves the circles about on the screen in x and y axis - animation
-    const x = useTransform(scrollY, inputRange, [
+    const x = useTransform(scrollY, xInputRange, [
         windowWidth,
         xDefaultOutput,
         xDefaultOutput,
         circleCenteredHorizontally,
     ]);
 
-    const y = useTransform(scrollY, inputRange, [
+    const y = useTransform(scrollY, yInputRange, [
         -circleSize / 2,
         yDefaultOutput,
         yDefaultOutput,
-        circleCenteredVertically - 50, //Prevents cutting out the bottom of the circles containers when animating out to the top ( due to overflowing property of the parent container)
+        circlePoppingOutOfFixedContainer,
+        circlePoppingOutOfFixedContainer,
+        circleAtTheBottomOfFixedContainer - windowHeight * 2,
     ]);
 
     return { circleSize, x, y };

@@ -20,8 +20,8 @@ export default function TechSection() {
         >
             <div className='grid sm:gird-rows-[repeat(5,1fr)_auto] sm:gird-rows-[repeat(8,1fr)] w-full h-full'>
                 <div className='relative row-span-4 sm:row-span-7 text-center'>
-                    <MainTech />
-                    <ProudOf />
+                    {/* <MainTech />
+                    <ProudOf /> */}
                 </div>
                 <Links />
             </div>
