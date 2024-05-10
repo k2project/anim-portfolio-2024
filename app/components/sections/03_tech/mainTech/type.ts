@@ -1,4 +1,5 @@
-export interface ITechLogo {
-    src: string;
-    alt: string;
+export interface ITechData {
+    src?: string;
+    text?: string;
+    animationData?: any;
 }

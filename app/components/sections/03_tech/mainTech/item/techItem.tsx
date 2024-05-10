@@ -1,27 +1,17 @@
-'use client';
+import { ITechData } from '../type';
+import TechItemCard from './techItemCard';
 
-import { ITechLogo } from '../type';
-import useTechItem from './useTechItem';
-import { itemStyle } from '../techData';
-import Logo from '@components/logos/app';
-import AnimatedFlipCard from '@components/cards/flipCard';
-import BackFaceContent from './backFaceContent';
+interface ITechItemProps extends ITechData {}
 
-interface ITechItemProps extends ITechLogo {
-    index: number;
-}
-
-export default function TechItem({ src, alt, index }: ITechItemProps) {
-    const { rotateY } = useTechItem(index);
-
+export default function TechItem({ src, text, animationData }: ITechItemProps) {
     return (
-        <li>
-            <AnimatedFlipCard
-                containerStyle={itemStyle}
-                rotateY={rotateY}
-                frontFaceContent={<Logo size='50%' />}
-                backFaceContent={<BackFaceContent src={src} alt={alt} />}
-            />
+        <li className='flex-shrink-0 flex justify-center items-center text-xl font-semibold text-white space-x-5'>
+            <TechItemCard src={src} animationData={animationData} />
+            {text && (
+                <p className='border rounded-md border-white px-10 h-32 min-w-44 flex items-center justify-center'>
+                    {text}
+                </p>
+            )}
         </li>
     );
 }

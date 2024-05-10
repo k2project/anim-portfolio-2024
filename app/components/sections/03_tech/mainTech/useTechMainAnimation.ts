@@ -1,25 +1,36 @@
 'use client';
 
-import { TECH_SECTION_FROM_TOP } from '@configs';
+import { TECH_SECTION_FROM_TOP, TECH_SECTION_H } from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
+import { RefObject, useEffect, useRef, useState } from 'react';
 
 interface IUseMainTechAnimation {
-    y: MotionValue<number>;
+    x: MotionValue<number>;
+    initialX: number;
+    listRef: RefObject<HTMLUListElement>;
 }
 export default function useMainTechAnimation(): IUseMainTechAnimation {
     const { scrollY } = useScroll();
-    const { windowHeight } = useWindowDimensions();
+    const listRef = useRef<HTMLUListElement>(null);
+    const { windowHeight, windowWidth } = useWindowDimensions();
     const techSectionFromTop = TECH_SECTION_FROM_TOP * windowHeight;
+    const techSectionHeight = TECH_SECTION_H * windowHeight;
 
-    const y = useTransform(
+    const [listWidth, setListWidth] = useState(windowWidth);
+    useEffect(() => {
+        if (listRef.current) setListWidth(listRef.current.scrollWidth);
+    }, []);
+
+    const initialX = 0;
+    const x = useTransform(
         scrollY,
         [
-            techSectionFromTop + windowHeight * 15,
-            techSectionFromTop + windowHeight * 17,
+            techSectionFromTop + windowWidth,
+            techSectionFromTop + techSectionHeight - windowHeight * 2,
         ],
-        [0, -windowHeight]
+        [initialX, -listWidth - windowWidth]
     );
 
-    return { y };
+    return { x, initialX, listRef };
 }

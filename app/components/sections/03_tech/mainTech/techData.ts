@@ -1,30 +1,54 @@
-import { ITechLogo } from './type';
+import { ITechData } from './type';
+import teamworkAnim from './lotties/teamwork-min.json';
+import pencilAnim from './lotties/pencil-min.json';
+import bulbAnim from './lotties/bulb-min.json';
+import okAnim from './lotties/ok-min.json';
+import shieldAnim from './lotties/shield-min.json';
 
-export const techMain: ITechLogo[] = [
-    { src: '/anim-portfolio-2024/assets/html.png', alt: 'HTML5' },
-    { src: '/anim-portfolio-2024/assets/css.png', alt: 'CSS3' },
-    { src: '/anim-portfolio-2024/assets/tailwind.webp', alt: 'Tailwind CSS' },
-    { src: '/anim-portfolio-2024/assets/storybook.png', alt: 'Storybook' },
-    { src: '/anim-portfolio-2024/assets/js.png', alt: 'JavaScript' },
-    { src: '/anim-portfolio-2024/assets/ts.svg', alt: 'Typescript' },
+export const techMain: ITechData[] = [
+    { src: '/anim-portfolio-2024/assets/html.png', text: 'HTML 5' },
+    { src: '/anim-portfolio-2024/assets/css.png', text: 'CSS 3' },
+    { src: '/anim-portfolio-2024/assets/tailwind.webp', text: 'Tailwind CSS' },
+    { src: '/anim-portfolio-2024/assets/storybook.png', text: 'Storybook' },
+    { src: '/anim-portfolio-2024/assets/js.png', text: 'JavaScript' },
+    { src: '/anim-portfolio-2024/assets/ts.svg', text: 'Typescript' },
     {
         src: '/anim-portfolio-2024/assets/react.svg',
-        alt: 'ReactJS + React Native',
+        text: 'React Native',
     },
-    { src: '/anim-portfolio-2024/assets/next.png', alt: 'NextJS' },
-    { src: '/anim-portfolio-2024/assets/redux.png', alt: 'Redux + Jotai' },
-    { src: '/anim-portfolio-2024/assets/jest.png', alt: 'Jest' },
+    {
+        src: '/anim-portfolio-2024/assets/react.svg',
+        text: 'React JS',
+    },
+    { src: '/anim-portfolio-2024/assets/next.png', text: 'Next JS' },
+    { src: '/anim-portfolio-2024/assets/redux.png', text: 'Redux' },
+    { src: '/anim-portfolio-2024/assets/jest.png', text: 'Jest' },
     {
         src: '/anim-portfolio-2024/assets/githubactions.svg',
-        alt: 'GitHub Actions + Git',
+        text: 'GitHub Actions',
     },
-    { src: '/anim-portfolio-2024/assets/docker.webp', alt: 'Docker' },
+    { src: '/anim-portfolio-2024/assets/docker.webp', text: 'Docker' },
+    {
+        animationData: pencilAnim,
+        text: 'Self-taught & Avid learner',
+    },
+    {
+        animationData: teamworkAnim,
+        text: 'Committed team player',
+    },
+    {
+        animationData: shieldAnim,
+        text: 'Strong work ethics',
+    },
+    {
+        animationData: okAnim,
+        text: 'Positive "can do" attitude',
+    },
+    {
+        animationData: bulbAnim,
+        text: 'Creative problem solver',
+    },
+    {
+        text: 'And more...',
+    },
 ];
-
-// The grid of the list depends on the number of items in a row and changes based on the size of the viewport:
-// small screens: 3 item per row
-// larger screens: 4 items per row
-// First we calculate the list width --> 100vh * 0.5 and then we divide that by the number of items in the row
-export const listStyle = 'grid-cols-3 md:grid-cols-4 gap-2';
-export const itemStyle =
-    'w-[calc(100vw*.8/3)] h-[calc(100vw*.8/3)] sm:w-[calc(100vw*.6/3)] sm:h-[calc(100vw*.6/3)] md:w-[calc(100vw*.5/4)] md:h-[calc(100vw*.5/4)] max-h-[calc(1920px*0.45/4)] max-w-[calc(1920px*0.45/4)]';

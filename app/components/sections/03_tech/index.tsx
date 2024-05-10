@@ -7,7 +7,6 @@ import React from 'react';
 import useTechSectionAnimation from './useTechSectionAnimation';
 import MainTech from './mainTech';
 import Links from './links';
-import ProudOf from './proudOf';
 
 export default function TechSection() {
     const { sectionY, initialY } = useTechSectionAnimation();
@@ -17,13 +16,13 @@ export default function TechSection() {
             {...SectionsData[Sections.Tech]}
             initialY={initialY}
             y={sectionY}
+            withMaxDesktopContainer={false}
         >
-            <div className='grid sm:gird-rows-[repeat(5,1fr)_auto] sm:gird-rows-[repeat(8,1fr)] w-full h-full'>
-                <div className='relative row-span-4 sm:row-span-7 text-center'>
-                    {/* <MainTech />
-                    <ProudOf /> */}
+            <div className='absolute h-1/2 bottom-0 left-0 w-full flex items-center'>
+                <div className='absolute w-full h-full flex items-center'>
+                    <Links />
                 </div>
-                <Links />
+                <MainTech />
             </div>
         </SectionWrapper>
     );
