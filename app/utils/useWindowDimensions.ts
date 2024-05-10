@@ -26,11 +26,16 @@ const useWindowDimensions = (): IUseWindowDimensions => {
     const [isSmallDevice, setIsSmallDevice] = useState(false);
 
     useEffect(() => {
-        function handleResize(): void {
+        function setSizes() {
             setWindowDimensions({
                 windowWidth: window.innerWidth,
                 windowHeight: window.innerHeight,
             });
+        }
+        function handleResize(): void {
+            if (window.innerWidth > LG_MQ_BREAKPOINT) {
+                setSizes();
+            }
             if (
                 window.matchMedia('(orientation: landscape)').matches &&
                 window.innerWidth < LG_MQ_BREAKPOINT
@@ -45,7 +50,8 @@ const useWindowDimensions = (): IUseWindowDimensions => {
                 setIsSmallDevice(false);
             }
         }
-        handleResize();
+        // On load set the screen sizes
+        setSizes();
         window.addEventListener('resize', handleResize);
         return (): void => window.removeEventListener('resize', handleResize);
     }, []);
