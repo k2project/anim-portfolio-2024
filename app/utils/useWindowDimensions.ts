@@ -37,15 +37,17 @@ const useWindowDimensions = (): IUseWindowDimensions => {
             // This prevent resizing on mobiles when the address bar hides/shows on scrolling and jumping of the content which animation is based on window height
             if (window.innerWidth > LG_MQ_BREAKPOINT) {
                 setSizes();
-            } else {
-                // Shows placeholder for small screens in landscape mode - auto reloads the app
-                if (window.matchMedia('(orientation: landscape)').matches) {
-                    setIsInSmallScreenLandscape(true);
-                } else {
-                    setIsInSmallScreenLandscape(false);
-                }
             }
 
+            // Shows placeholder for small screens in landscape mode - auto reloads the app
+            if (
+                window.matchMedia('(orientation: landscape)').matches &&
+                window.innerWidth < LG_MQ_BREAKPOINT
+            ) {
+                setIsInSmallScreenLandscape(true);
+            } else {
+                setIsInSmallScreenLandscape(false);
+            }
             if (window.innerWidth < LG_MQ_BREAKPOINT) {
                 setIsSmallDevice(true);
             } else {
