@@ -41,7 +41,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
         : circleCenteredVertically + topOffset; // on the larger screens centered vertically with some offset on top
 
     const inputRange = [
-        aboutSectionFromTop - windowHeight * 1.5,
+        aboutSectionFromTop - windowHeight * 2,
         aboutSectionFromTop,
         aboutSectionFromTop + windowHeight * 7,
         aboutSectionFromTop +

@@ -28,7 +28,7 @@ export default function useDeveloperTextAnimation(): IUseDeveloperTextAnimation 
     );
     const developerAbsH = useTransform(
         scrollY,
-        [developerSectionH / 3, developerSectionH - windowHeight],
+        [developerSectionH / 3, developerSectionH - windowHeight * 2],
         [0, developerSectionH]
     );
 
