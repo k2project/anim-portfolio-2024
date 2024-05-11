@@ -12,7 +12,13 @@ export default function MoneyDashboardLogo({
     gradient?: boolean;
 }) {
     return (
-        <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <svg
+            viewBox='0 0 24 24'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+            version='1.1'
+            id='svgMoneyDashboard'
+        >
             <defs>
                 <linearGradient id='grad1' x1='0%' y1='100%' x2='100%' y2='0%'>
                     <stop offset='0%' style={{ stopColor: stopColorPrimary }} />

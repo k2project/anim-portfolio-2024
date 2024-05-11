@@ -27,7 +27,7 @@ export default function Developer({
             height={size * DEVELOPER_RATIO}
             viewBox='0 0 51.987198 244.32394'
             version='1.1'
-            id='svg5'
+            id='svgDeveloperText'
             xmlns='http://www.w3.org/2000/svg'
         >
             <defs>

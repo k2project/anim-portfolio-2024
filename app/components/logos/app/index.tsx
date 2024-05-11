@@ -19,7 +19,7 @@ export default function Logo({
             height={size}
             viewBox='0 0 39.378132 41.818489'
             version='1.1'
-            id='svg5'
+            id='svgLogo'
             xmlns='http://www.w3.org/2000/svg'
         >
             <defs>

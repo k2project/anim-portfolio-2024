@@ -21,7 +21,7 @@ export default function InnerCircle({
             height={size}
             viewBox='0 0 84.192688 84.274483'
             version='1.1'
-            id='svg5'
+            id='svgInnerCircle'
             xmlns='http://www.w3.org/2000/svg'
             className='absolute overflow-visible'
         >

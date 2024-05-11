@@ -19,7 +19,7 @@ export default function SoftwareText({
             height={size * SOFTWARE_RATIO}
             viewBox='0 0 41.624001 222.21965'
             version='1.1'
-            id='svg5'
+            id='svgSoftwareText'
             xmlns='http://www.w3.org/2000/svg'
         >
             <g id='layer1' transform='translate(-159.60134,-46.678292)'>
