@@ -11,9 +11,7 @@ export default function RecommendationContainer({
 }: IRecommendation) {
     const [imgError, setImageError] = useState(false);
     return (
-        <div
-            className={`bg-tertiary text-primary rounded-md shadow-lg text-sm overflow-hidden `}
-        >
+        <div className='bg-tertiary text-primary rounded-md shadow-lg text-sm overflow-hidden '>
             <div className='space-y-3 p-8 pt-12'>{text}</div>
             <div className='flex items-center bg-secondary p-8'>
                 <div className='w-16 h-16 rounded-full bg-gradient-theme overflow-hidden justify-center items-center flex relative shadow '>

@@ -19,7 +19,7 @@ export default function useLinksAnimation(): IUseLinksAnimation {
             techSectionFromTop + techSectionHeight - windowHeight * 2.5,
             techSectionFromTop + techSectionHeight - windowHeight * 2,
             techSectionFromTop + techSectionHeight - windowHeight,
-            techSectionFromTop + techSectionHeight,
+            techSectionFromTop + techSectionHeight - windowHeight / 2,
         ],
         [0, 1, 1, 0]
     );

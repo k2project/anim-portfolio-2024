@@ -12,14 +12,13 @@ import { m } from 'framer-motion';
  */
 
 export default function SectionWrapper({
-    zIndex,
     height,
     children,
     initialY,
     y,
     withMaxDesktopContainer = true,
     id,
-    style,
+    style = '',
 }: ISectionWrapperProps) {
     const { windowHeight } = useWindowDimensions();
     return (
@@ -29,7 +28,7 @@ export default function SectionWrapper({
             id={id}
         >
             <m.div
-                className={`fixed w-screen h-screen top-0 left-0 flex justify-center ${zIndex} ${style}`}
+                className={`fixed w-screen h-screen top-0 left-0 flex justify-center ${style}`}
                 style={{ y }}
                 initial={{ y: initialY }}
             >
