@@ -5,14 +5,18 @@ export default function MoneyDashboardLogo({
     stopColorPrimary = STOP_COLOR_PRIMARY,
     stopColorSecondary = STOP_COLOR_SECONDARY,
     gradient = false,
+    size = 50,
 }: {
     style?: string;
     stopColorPrimary?: string;
     stopColorSecondary?: string;
     gradient?: boolean;
+    size?: number;
 }) {
     return (
         <svg
+            width={size}
+            height={size}
             viewBox='0 0 24 24'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
