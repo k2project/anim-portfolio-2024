@@ -36,7 +36,7 @@ const AboutSection: ISection = {
 };
 
 export const TECH_SECTION_FROM_TOP = ABOUT_SECTION_FROM_TOP + ABOUT_SECTION_H;
-export const TECH_SECTION_H = 15;
+export const TECH_SECTION_H = 20;
 const TechSection: ISection = {
     id: Sections.Tech,
     height: TECH_SECTION_H,

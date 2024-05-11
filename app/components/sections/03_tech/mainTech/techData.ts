@@ -30,25 +30,23 @@ export const techMain: ITechData[] = [
     { src: '/anim-portfolio-2024/assets/docker.webp', text: 'Docker' },
     {
         animationData: pencilAnim,
-        text: 'Self-taught & Avid learner',
+        text: 'Self-taught & Avid Learner',
     },
     {
         animationData: teamworkAnim,
-        text: 'Committed team player',
+        text: 'Committed Team Player',
     },
     {
         animationData: shieldAnim,
-        text: 'Strong work ethics',
+        text: 'Strong Work Ethics',
     },
     {
         animationData: okAnim,
-        text: 'Positive "can do" attitude',
+        text: 'Positive "can do" Attitude',
     },
     {
         animationData: bulbAnim,
-        text: 'Creative problem solver',
+        text: 'Creative Problem Solver',
     },
-    {
-        text: 'And more...',
-    },
+    { src: '/anim-portfolio-2024/assets/plus.png', text: 'And more...' },
 ];

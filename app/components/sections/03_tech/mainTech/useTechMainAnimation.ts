@@ -22,11 +22,11 @@ export default function useMainTechAnimation(): IUseMainTechAnimation {
         if (listRef.current) setListWidth(listRef.current.scrollWidth);
     }, []);
 
-    const initialX = 0;
+    const initialX = windowWidth;
     const x = useTransform(
         scrollY,
         [
-            techSectionFromTop + windowWidth,
+            techSectionFromTop,
             techSectionFromTop + techSectionHeight - windowHeight * 2,
         ],
         [initialX, -listWidth - windowWidth]

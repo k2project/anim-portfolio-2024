@@ -20,12 +20,12 @@ export default function TechItemCard({
     if (!src && !animationData) return null;
 
     return (
-        <div className='w-32 h-32 rounded-md bg-tertiary p-2 relative'>
+        <div className='w-32 h-32 rounded-full bg-tertiary p-2 relative'>
             {src && (
                 <Image
                     src={src}
                     alt=''
-                    className='opacity-80 p-6'
+                    className='opacity-80 p-8'
                     fill={true}
                     sizes='100vw, 50vw, 30vw'
                 />

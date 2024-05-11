@@ -15,7 +15,7 @@ export default function MainTech() {
             <m.ul
                 ref={listRef}
                 aria-labelledby='tech-stack'
-                className='flex min-w-full pt-20 pb-6 space-x-5 pl-5'
+                className='flex min-w-full pt-20 pb-6 space-x-7 pl-5'
                 style={{ x }}
                 initial={{ x: initialX }}
             >

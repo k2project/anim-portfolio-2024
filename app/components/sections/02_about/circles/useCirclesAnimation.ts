@@ -34,7 +34,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const circleAtTheBottomOfFixedContainer = windowHeight - circleSize;
     const windowPickSize = isMobileScreen
         ? circleSize + windowHeight * 0.1
-        : circleSize / 2 - 50;
+        : circleSize / 2 - 70;
     const circlePoppingOutOfFixedContainer =
         circleAtTheBottomOfFixedContainer + windowPickSize;
     const rightPadding = 80; // Ensures extra room for the right side content when the circles are placed on the left
