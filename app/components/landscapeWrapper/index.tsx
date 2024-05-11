@@ -6,7 +6,7 @@ export default function LandscapeWrapper() {
             <div className='pt-12'>
                 <Image
                     src='/anim-portfolio-2024/assets/landscape.png'
-                    alt=''
+                    alt='Rotate into the portrait mode'
                     className='m-auto invert opacity-30 -rotate-90'
                     width={80}
                     height={80}

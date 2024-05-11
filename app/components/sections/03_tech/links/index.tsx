@@ -28,9 +28,11 @@ export default function Links() {
                 download
                 target='_blank'
                 rel='noopener noreferrer'
-                className='border-contrast border-none py-6 px-16 text-xl text-primary font-bold uppercase rounded-lg bg-gradient-theme w-full md:w-64 h-20 '
+                className='border-contrast border-none py-6 px-16 text-primary font-bold rounded-lg bg-gradient-theme w-full md:w-64 h-20'
             >
-                RESUME
+                <span className='text-xl uppercase leading-tight'>RESUME</span>
+
+                <span className='text-xs block '>Download as .pdf</span>
             </a>
         </m.div>
     );

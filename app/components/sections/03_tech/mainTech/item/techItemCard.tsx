@@ -1,13 +1,8 @@
 import Image from 'next/image';
 import Lottie, { Options } from 'react-lottie';
+import { ITechData } from '../type';
 
-export default function TechItemCard({
-    src,
-    animationData,
-}: {
-    animationData?: any;
-    src?: string;
-}) {
+export default function TechItemCard({ src, animationData, text }: ITechData) {
     const defaultOptions: Options = {
         loop: true,
         autoplay: true,
@@ -24,7 +19,7 @@ export default function TechItemCard({
             {src && (
                 <Image
                     src={src}
-                    alt=''
+                    alt={text || ''}
                     className='opacity-80 p-8'
                     fill={true}
                     sizes='100vw, 50vw, 30vw'

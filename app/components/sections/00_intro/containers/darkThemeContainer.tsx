@@ -23,7 +23,10 @@ export default function DarkThemeContainer() {
                     className='text-center absolute bottom-24 w-full opacity-100'
                     style={{ opacity, scale }}
                 >
-                    <p className='whitespace-pre-line tracking-widest text-sm font-semibold text-tertiary'>
+                    <p
+                        className='whitespace-pre-line tracking-widest text-sm font-semibold text-tertiary'
+                        aria-live='polite'
+                    >
                         <SlideInOut
                             text='SCROLL DOWN'
                             delay={6.5}

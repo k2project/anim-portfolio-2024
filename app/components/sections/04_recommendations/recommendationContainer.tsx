@@ -32,10 +32,10 @@ export default function RecommendationContainer({
                     )}
                 </div>
                 <div className='flex-1 pl-4'>
-                    <h2 className='font-semibold text-gradient-theme'>
+                    <h3 className='font-semibold text-gradient-theme'>
                         {author}
-                    </h2>
-                    <p className='text-xs'>{role}</p>
+                    </h3>
+                    <h4 className='text-xs'>{role}</h4>
                 </div>
             </div>
         </div>

@@ -21,6 +21,7 @@ export default function RecommendationsSection() {
             y={sectionY}
             style='overflow-hidden'
         >
+            <h2 className='sr-only'>Recommendations</h2>
             <div className='flex px-2'>
                 <AnimatedColumnContainer data={recommendationsColLeft} />
                 <AnimatedColumnContainer

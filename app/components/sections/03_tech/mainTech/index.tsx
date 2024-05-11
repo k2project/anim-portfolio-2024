@@ -9,8 +9,8 @@ export default function MainTech() {
     const { listRef, x, initialX } = useMainTechAnimation();
     return (
         <>
-            <h3 className='sr-only' id='tech stack'>
-                Main tech stack
+            <h3 className='sr-only' id='tech-stack'>
+                Main tech stack and other skills
             </h3>
             <m.ul
                 ref={listRef}
