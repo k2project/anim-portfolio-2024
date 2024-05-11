@@ -6,6 +6,7 @@ import {
     MAX_DESKTOP,
     LG_MQ_BREAKPOINT,
     TECH_SECTION_H,
+    SM_MQ_BREAKPOINT,
 } from '@configs';
 import useWindowDimensions from '@utils/useWindowDimensions';
 import { MotionValue, useScroll, useTransform } from 'framer-motion';
@@ -23,6 +24,7 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const aboutSectionFromTop = ABOUT_SECTION_FROM_TOP * windowHeight;
 
     const isSmallerScreen = windowWidth < LG_MQ_BREAKPOINT;
+    const isMobileScreen = windowWidth < SM_MQ_BREAKPOINT;
 
     const circleSize = isSmallerScreen ? windowWidth : windowWidth * 0.7;
     // On larger screens the width is restricted to the MAX_DESKTOP
@@ -30,7 +32,9 @@ export default function useCirclesAnimation(): IUseCirclesAnimation {
     const circleCenteredHorizontally = (containerWidth - circleSize) / 2;
     const circleCenteredVertically = (windowHeight - circleSize) / 2;
     const circleAtTheBottomOfFixedContainer = windowHeight - circleSize;
-    const windowPickSize = windowHeight * (isSmallerScreen ? 0.6 : 0.4);
+    const windowPickSize = isMobileScreen
+        ? circleSize + windowHeight * 0.1
+        : circleSize / 2 - 50;
     const circlePoppingOutOfFixedContainer =
         circleAtTheBottomOfFixedContainer + windowPickSize;
     const rightPadding = 80; // Ensures extra room for the right side content when the circles are placed on the left
