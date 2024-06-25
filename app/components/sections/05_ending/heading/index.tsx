@@ -34,7 +34,7 @@ export default function Heading() {
                 initial={{ y: 50, opacity: 0 }}
             >
                 AN EXPERIENCED AND DEDICATED TEAM <br />
-                WITH PASSION FOR EXCELLENCE AND MENTORING.
+                WITH PASSION FOR EXCELLENCE.
             </m.div>
 
             <m.div

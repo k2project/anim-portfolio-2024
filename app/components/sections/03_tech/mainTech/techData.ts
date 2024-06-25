@@ -42,7 +42,7 @@ export const techMain: ITechData[] = [
     },
     {
         animationData: okAnim,
-        text: 'Positive "can do" Attitude',
+        text: 'Self-starter',
     },
     {
         animationData: bulbAnim,
